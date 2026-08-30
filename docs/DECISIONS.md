@@ -7,3 +7,4 @@
 | 2026-08-30 | Xozai and Jerry Project are different ventures; Xozai runs its own discovery, own repo | joseleos | Repo renamed `xozai/jerry` → `xozai/xozai-venture` |
 | 2026-08-30 | Xozai discovery excludes Jerry Project's candidates (OPCC exhibits, MUTCD traffic control plans) | joseleos | Encoded in venture-discovery SKILL.md |
 | 2026-08-30 | Second discovery track: enterprise SPM, AI-forward (joseleos `/venture-build`). Skills parameterized by `research/spaces/<SPACE>.md`; civil track continues to ranking in parallel | joseleos / Claude | Civil scan merged (PR #2) |
+| 2026-08-30 | Marketability re-anchored per space (SPM addendum, PR #3); cross-track comparison is prose only, never a numeric ranking | Scribe / Claude | Encoded in venture-discovery SKILL.md step 7 |

@@ -42,4 +42,17 @@ analyst" (duties = budgeted manual work).
 conference, SaaStr, LinkedIn thought-leadership, G2 category listings,
 partnerships with CRM/CPQ consultancies, CFO/controller newsletters.
 
+**Scoring:** use `research/SPM_RUBRIC_ADDENDUM.md` (Scribe), not the civil
+anchors. "Buyer = user" becomes "buying-committee friction."
+
+**SPM-only required capture (feeds wedge narrative):** *one concrete sentence on
+what the AI does here that an incumbent cannot also claim.* All named incumbents
+already market "AI-powered," so that phrase is noise; if the honest answer is
+"nothing specific," the candidate caps at 3 on wedge.
+
+**Directional hint:** low-liability ground is the design / modeling / diagnostic /
+communication layer (plan design, dispute handling, comp communication) — not the
+calculation engine, which is both the contested mid-market ground and where a
+wrong number becomes a wage claim.
+
 **Status:** sweep not started. Output → `research/OPPORTUNITY_SCAN_SPM_<date>.md`.

@@ -64,6 +64,9 @@ version: 1
      (named pain, time-to-obvious, buyer = user, channel fit, liability drag,
      wedge narrative, reference velocity), normalized to 100 then mapped to 1–5.
      Rule: big + incumbent-owned + procurement-gated is *hard*, not easy.
+     **Re-anchor per space**: 5 means "best achievable in this space." Use the
+     space's rubric addendum if one exists (`research/SPM_RUBRIC_ADDENDUM.md`
+     for SPM); never score a new space on another space's anchors.
    - **Our ability to build** — lean AI-native team, no field sales, no
      procurement motion, no validation studies for stamped outputs.
    Add a fifth informational column: competitive intensity (not scored, shown).
@@ -73,6 +76,11 @@ version: 1
    change the answer, open gaps and their cost to close.
 6. **Gate.** Post the memo in the channel and @mention joseleos. Wait for a
    message of the form `pick: <candidate>`. Record it in `docs/DECISIONS.md`.
+7. **Across tracks** (when more than one space has a memo): Hermes writes a
+   **prose** structural comparison — buyer motion, distribution, liability,
+   time-to-revenue, what the team can build — with each track's top candidate.
+   **Never put scores from different tracks in one ranked table.** Scores are
+   only comparable within a track.
 
 ## Outputs
 - `research/OPPORTUNITY_SCAN[_<SPACE>]_<date>.md` — ranked table + per-candidate evidence.
@@ -84,6 +92,7 @@ Live in the space profile. Civil (joseleos, 2026-08-30): OPCC exhibits and MUTCD
 traffic-control plans belong to the Jerry Project venture — drop before scoring.
 
 ## Anti-patterns
+- Cross-track numeric rankings. A civil 80 and an SPM 80 are not the same thing.
 - Re-running the sweep when a scan exists. Extend it.
 - Letting market size leak into the marketing column.
 - Paraphrased quotes. They cannot become headlines.
