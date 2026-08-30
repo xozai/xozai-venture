@@ -1,0 +1,2003 @@
+{
+  "schema_version": "1.0.0",
+  "meta": {
+    "venture": {
+      "value": "ucm",
+      "unit": "text",
+      "source": "product/FINANCIAL_BRIEF_UCM.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "scenario": {
+      "value": "upside",
+      "unit": "text",
+      "source": "product/FINANCIAL_BRIEF_UCM.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "currency": {
+      "value": "USD",
+      "unit": "iso-4217",
+      "source": "product/FINANCIAL_BRIEF_UCM.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "start_month": {
+      "value": "2026-10",
+      "unit": "YYYY-MM",
+      "source": "assumption \u2014 first full month after kickoff",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "input"
+    },
+    "horizon_months": {
+      "value": 36,
+      "unit": "months",
+      "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "opening_cash": {
+      "value": 50000,
+      "unit": "USD",
+      "source": "assumption \u2014 joseleos to confirm bootstrapped opening cash",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "formation_legal": {
+    "items": [
+      {
+        "name": {
+          "value": "DE C-Corp formation (Stripe Atlas, all-in)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Registered agent",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 100,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 13,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "DE franchise tax + annual report",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Ad hoc counsel (contracts, employment docs)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71 ($3\u20138k/yr, L)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 400,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71 ($3\u20138k/yr, L)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71 ($3\u20138k/yr, L)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71 ($3\u20138k/yr, L)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a71 ($3\u20138k/yr, L)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Trademark filing",
+          "unit": "text",
+          "source": "assumption \u2014 USPTO fee + counsel",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1500,
+          "unit": "USD",
+          "source": "assumption \u2014 USPTO fee + counsel",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "assumption \u2014 USPTO fee + counsel",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 6,
+          "unit": "month",
+          "source": "assumption \u2014 USPTO fee + counsel",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 6,
+          "unit": "month",
+          "source": "assumption \u2014 USPTO fee + counsel",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "ga_ops": {
+    "items": [
+      {
+        "name": {
+          "value": "Bookkeeping (fractional)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (no $ figure found)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 300,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (no $ figure found)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (no $ figure found)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (no $ figure found)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (no $ figure found)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Payroll provider (Gusto Simple, 2\u20133 employees)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($61\u201379/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 67,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($61\u201379/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($61\u201379/mo)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($61\u201379/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($61\u201379/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Software/tooling (~$160/head \u00d7 2 eng)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($117\u2013200/head/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 320,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($117\u2013200/head/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($117\u2013200/head/mo)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($117\u2013200/head/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md follow-up #13 ($117\u2013200/head/mo)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Banking + fees",
+          "unit": "text",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 25,
+          "unit": "USD",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Cyber liability",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 ($500\u20133,000)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1500,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 ($500\u20133,000)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 ($500\u20133,000)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 ($500\u20133,000)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 ($500\u20133,000)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Tech E&O (from launch)",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (~$5k floor)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 5000,
+          "unit": "USD",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (~$5k floor)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (~$5k floor)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 8,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (~$5k floor)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a72 (~$5k floor)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "General liability",
+          "unit": "text",
+          "source": "assumption \u2014 small-office GL",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 600,
+          "unit": "USD",
+          "source": "assumption \u2014 small-office GL",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "assumption \u2014 small-office GL",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption \u2014 small-office GL",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "assumption \u2014 small-office GL",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "personnel": {
+    "roster": [
+      {
+        "role": {
+          "value": "Founder \u2014 product/domain (deferred comp)",
+          "unit": "text",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30); base = memo line",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30); base = memo line",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30); base = memo line",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30); base = memo line",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 150000,
+          "unit": "USD/year",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30); base = memo line",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (~10%)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (25\u201330% at full benefits; 20% lean)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 0,
+          "unit": "USD/FTE",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": true,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": true,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "role": {
+          "value": "Engineer 1 \u2014 senior full-stack/geospatial",
+          "unit": "text",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 ($90\u2013130k non-Bay) + product/finance/ucm/BUILD_ESTIMATE.md team shape",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 ($90\u2013130k non-Bay) + product/finance/ucm/BUILD_ESTIMATE.md team shape",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 ($90\u2013130k non-Bay) + product/finance/ucm/BUILD_ESTIMATE.md team shape",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 ($90\u2013130k non-Bay) + product/finance/ucm/BUILD_ESTIMATE.md team shape",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 110000,
+          "unit": "USD/year",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 ($90\u2013130k non-Bay) + product/finance/ucm/BUILD_ESTIMATE.md team shape",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.1,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (~10%)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0.2,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (25\u201330% at full benefits; 20% lean)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 2500,
+          "unit": "USD/FTE",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": false,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": false,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "role": {
+          "value": "Engineer 2 \u2014 full-stack/product",
+          "unit": "text",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md (M2 add) + research/FINANCIAL_BENCHMARKS.md \u00a73",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md (M2 add) + research/FINANCIAL_BENCHMARKS.md \u00a73",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 3,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md (M2 add) + research/FINANCIAL_BENCHMARKS.md \u00a73",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md (M2 add) + research/FINANCIAL_BENCHMARKS.md \u00a73",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 100000,
+          "unit": "USD/year",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md (M2 add) + research/FINANCIAL_BENCHMARKS.md \u00a73",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.1,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (~10%)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0.2,
+          "unit": "decimal",
+          "source": "research/FINANCIAL_BENCHMARKS.md \u00a73 (25\u201330% at full benefits; 20% lean)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 2500,
+          "unit": "USD/FTE",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": false,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": false,
+          "unit": "boolean",
+          "source": "docs/DECISIONS.md (joseleos 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "rnd": {
+    "items": [
+      {
+        "name": {
+          "value": "Data/parser spike (one-time)",
+          "unit": "text",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md ($2\u20135k)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 3500,
+          "unit": "USD",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md ($2\u20135k)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md ($2\u20135k)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md ($2\u20135k)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md ($2\u20135k)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Dev tooling",
+          "unit": "text",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 150,
+          "unit": "USD",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Hosting/data/monitoring \u2014 build + \u226410 users",
+          "unit": "text",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (10 users: $250\u2013450)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 350,
+          "unit": "USD",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (10 users: $250\u2013450)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (10 users: $250\u2013450)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (10 users: $250\u2013450)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (10 users: $250\u2013450)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Hosting/data/monitoring \u2014 ~100 users",
+          "unit": "text",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (100 users: $500\u20131,100)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 800,
+          "unit": "USD",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (100 users: $500\u20131,100)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (100 users: $500\u20131,100)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 13,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (100 users: $500\u20131,100)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 24,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (100 users: $500\u20131,100)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Hosting/data/monitoring \u2014 100\u20131,000 users",
+          "unit": "text",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (1,000 users: $2.5\u20137k)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2500,
+          "unit": "USD",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (1,000 users: $2.5\u20137k)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (1,000 users: $2.5\u20137k)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 25,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (1,000 users: $2.5\u20137k)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "product/finance/ucm/BUILD_ESTIMATE.md run-rate table (1,000 users: $2.5\u20137k)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "sales_marketing": {
+    "items": [
+      {
+        "name": {
+          "value": "A1 Domain + DNS",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 12,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A4 ASCE dues + UESI add-on",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 307,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A5 SEO tooling \u2014 Ahrefs Starter",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 29,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 4,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 9,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A6 Design \u2014 Canva Pro",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 15,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 4,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A7 Webinar platform \u2014 Zoom Webinars 500 (PDH delivery)",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 79,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 7,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A8 Tutorial video tooling",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 24,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 7,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "B3 Conference attendance (no booth), 1/yr",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2500,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A5-U SEO tooling \u2014 Ahrefs Lite (from m10)",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 129,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 10,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A9 Contract technical writer \u2014 FHWA/DOT informational queries",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2000,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 8,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A10 Contract video editor",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1500,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 10,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A11 Paid search \u2014 bounded 3-month falsification test (kill: <3 qualified trials)",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "A12 Launch collateral + brand refresh",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 6000,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 9,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 9,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "B1 CRM + outbound tooling",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 99,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "B2 UESI/APWA exhibit booth + travel (m14)",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 8000,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "B2 UESI/APWA exhibit booth + travel (m26)",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 8000,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 26,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 26,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "B4 State DOT training sponsorship",
+          "unit": "text",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 purchasability unconfirmed",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 3000,
+          "unit": "USD",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 purchasability unconfirmed",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 purchasability unconfirmed",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 18,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 purchasability unconfirmed",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 18,
+          "unit": "month",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 purchasability unconfirmed",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "cogs": {
+    "revenue_pct": {
+      "value": 0.04,
+      "unit": "decimal",
+      "source": "assumption \u2014 card processing ~3% + support tooling",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "per_active_logo_monthly": {
+      "value": 18,
+      "unit": "USD/logo/month",
+      "source": "product/finance/ucm/BUILD_ESTIMATE.md LLM $3\u20139/active user/mo \u00d7 seats per logo",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "benchmark"
+    }
+  },
+  "revenue": {
+    "starting_logos": {
+      "value": 0,
+      "unit": "logos",
+      "source": "product/FINANCIAL_BRIEF_UCM.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "start_month": {
+      "value": 8,
+      "unit": "month",
+      "source": "product/finance/ucm/BUILD_ESTIMATE.md (M3 release month 7 \u2192 first paid month 8)",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "new_logos_monthly": {
+      "value": 3.0,
+      "unit": "logos/month",
+      "source": "assumption \u2014 no win-rate benchmark for low-touch individual-buyer SaaS (research/FINANCIAL_BENCHMARKS.md \u00a77)",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "new_logo_growth_monthly_pct": {
+      "value": 0.05,
+      "unit": "decimal",
+      "source": "assumption",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "monthly_logo_churn_pct": {
+      "value": 0.008,
+      "unit": "decimal",
+      "source": "research/FINANCIAL_BENCHMARKS.md \u00a77 SMB band 10\u201315%/yr \u2192 monthly",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "acv": {
+      "value": 9000,
+      "unit": "USD/logo/year",
+      "source": "research/FINANCIAL_BENCHMARKS.md \u00a77 Civil 3D anchor $239/seat/mo \u2192 $200\u2013250; seats/logo assumption",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "annual_expansion_pct": {
+      "value": 0.05,
+      "unit": "decimal",
+      "source": "assumption \u2014 seat expansion within firm",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "billing_terms_months": {
+      "value": 12,
+      "unit": "months",
+      "source": "product/FINANCIAL_BRIEF_UCM.md (annual upfront preferred)",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "financing": {
+    "events": []
+  }
+}
