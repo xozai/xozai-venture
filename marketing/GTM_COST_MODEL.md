@@ -151,21 +151,34 @@ HermesX owns it. Do not merge these numbers into a model presented to joseleos w
 | # | Line item | Base | Upside | Downside | Cadence | Start m | Source | Conf |
 |---|---|---|---|---|---|---|---|---|
 | B1 | CRM + outbound tooling (1 seat) | $0 | $99/mo | $0 | monthly | 12 | assumption; base uses a spreadsheet at this volume | L |
-| B2 | UESI Pipelines or APWA PWX exhibit — booth + travel | $0 | $8,000 | $0 | one_time | 14, 26 | **quote required** — ASCE exhibits, Sean Scully, 703-295-6154 | L |
-| B3 | Conference attendance (no booth) — 1 event/yr, registration + travel | $2,500 | $2,500 | $0 | one_time | 12, 24, 36 | assumption | L |
+| B2 | UESI Pipelines exhibit — 10x10 booth + travel | $0 | $6,500 | $0 | one_time | 14, 26 | booth $4,995 published (pipelinesconference.org/exhibitors, verified 2026-08-30) + ~$1,500 travel (assumption) | M |
+| B3 | Conference attendance (no booth) — 1 event/yr, registration + travel | $2,500 | $2,500 | $0 | one_time | 12, 24, 36 | speaker/moderator member early-bird reg $995 published (pipelinesconference.org/registration, verified 2026-08-30) + ~$1,500 travel (assumption); **do not stack with B2 — the booth includes one full registration** | M |
 | B4 | State DOT utility-coordination training sponsorship | $0 | $3,000 | $0 | one_time | 18 | assumption — **is this even purchasable?** | L |
 | B5 | Design-partner / pilot incentives (credits, not cash) | $0 | $0 | $0 | — | — | credits reduce revenue, not S&M — see §E.4 | M |
 
 Two things HermesX should resolve rather than accept:
 
-- **B2 is unpriced.** Published exhibitor prospectuses for UESI Pipelines 2026 (Detroit, Aug 1–5) and
-  APWA PWX 2026 are not public; the only figures I could find were third-party aggregator estimates
-  of $15k–$40k *all-in cost to attend*, which is a different quantity from booth price and is not
-  citable. $8,000 is my placeholder for a small booth plus one person's travel. Someone should call
-  the number above and replace it with a real quote before this reaches a memo.
+- **B2 is now priced from a first-party source, so no ASCE call is needed for the base decision.**
+  UESI Pipelines 2026 (Detroit, Aug 1–5) publishes its booth fees directly:
+  10x10 $4,995 / 10x20 $9,990 / 10x30 $14,385 / 20x20 $17,880
+  (<https://www.pipelinesconference.org/exhibitors>, verified 2026-08-30). The 10x10 includes one
+  6' skirted table, one chair, a 500W outlet, **one full registration**, one exhibit-hall
+  registration, and lead retrieval. B2 is therefore $4,995 booth + ~$1,500 travel = $6,500, down
+  from my $8,000 placeholder. The earlier $15k–$40k figures circulating from third-party
+  aggregators are *all-in cost to attend* — a different quantity, and not what the model needs.
+  Sponsorship tiers are still unpublished; call ASCE exhibits (Sean Scully, 703-295-6154) only if
+  we want a tier above a plain booth.
+- **B2 and B3 must not both fire in the same year.** The 10x10 includes one full registration, so
+  an exhibit year already covers the B3 attendance line. As currently scheduled they overlap in
+  m24/m26 in the upside scenario — HermesX should either move B2 to a B3 year and drop that year's
+  B3, or state explicitly that a second person attends.
 - **B3 appears in the base case** and is the only base-case line I have put in HermesX's section
   rather than mine. A founder attending one UESI event a year is not optional if PDH-track speaking
   is the distribution plan; but whether it belongs in S&M or in founder T&E under `ga_ops` is his call.
+  The $2,500 holds up now that registration is sourced: speaker/moderator member early-bird is $995
+  (plain member early-bird $1,095; non-member $1,395), leaving ~$1,500 for flight and three nights.
+  Speaking is also the cheapest rate on the published sheet, which is a small argument for the
+  PDH-track plan on cost alone.
 
 ---
 
@@ -202,13 +215,14 @@ the model says about GTM, the number that moves it is this row — not the ad bu
 | | Base | Upside | Downside |
 |---|---|---|---|
 | Year 1 (m1–12) | ~$3,800 | ~$25,200 | ~$320 |
-| Year 2 (m13–24) | ~$4,600 | ~$61,000 | ~$320 |
-| Year 3 (m25–36) | ~$4,600 | ~$57,000 | ~$320 |
-| **36-month total** | **~$13,000** | **~$143,200** | **~$960** |
+| Year 2 (m13–24) | ~$4,600 | ~$59,500 | ~$320 |
+| Year 3 (m25–36) | ~$4,600 | ~$55,500 | ~$320 |
+| **36-month total** | **~$13,000** | **~$140,200** | **~$960** |
 
-Upside fell from ~$171,700 to ~$143,200 in the 2026-08-30 revision: cutting A11 from a standing
-$1,200/mo to a $1,500 bounded test removed $28,500. Base and downside are unchanged — neither ever
-carried paid search.
+Upside fell from ~$171,700 to ~$143,200 in the first 2026-08-30 revision: cutting A11 from a standing
+$1,200/mo to a $1,500 bounded test removed $28,500. It fell a further $3,000 to ~$140,200 when B2 was
+repriced from the $8,000 placeholder to the published $4,995 booth + travel, in both exhibit years.
+Base and downside are unchanged — neither ever carried paid search, and neither carries a booth.
 
 Hand-derived from the tables above and rounded to the nearest $100; the engine's output is
 authoritative once these line items are loaded. Base includes §B3 conference attendance ($2,500/yr
@@ -261,7 +275,12 @@ Estimates for planning; not legal, tax, or investment advice.
 - Kit (ConvertKit) free plan to 10,000 subscribers, verified 2026-08-30 — https://kit.com/pricing
 - Vercel Hobby $0 / Pro $20/mo, verified 2026-08-30 — https://vercel.com/pricing
 - Zoom Webinars 500, $79/mo, 2026-08-30 — https://zoom.us/pricing/events
-- UESI Pipelines 2026 (Detroit, Aug 1–5), exhibitor contact; prospectus pricing not public, 2026-08-30 — https://www.pipelinesconference.org/exhibitors
+- UESI Pipelines 2026 (Detroit, Aug 1–5) exhibitor booth fees, 10x10 $4,995 / 10x20 $9,990 /
+  10x30 $14,385 / 20x20 $17,880; 10x10 includes one full registration, verified 2026-08-30 —
+  https://www.pipelinesconference.org/exhibitors
+- UESI Pipelines 2026 registration, speaker/moderator member early-bird $995, member early-bird
+  $1,095, non-member early-bird $1,395 (early bird ends 2026-05-27), verified 2026-08-30 —
+  https://www.pipelinesconference.org/registration
 - APWA PWX exhibitor information; prospectus pricing not public, 2026-08-30 — https://www.apwa.org/events/pwx-conference/pwx-for-exhibitors/
 - UCM term-cluster search demand: no measured volume obtainable; empty commercial SERP plus ~4,000
   ASCE UESI national members bounding the cluster under ~50–100 searches/mo — Researcher, Xozai
