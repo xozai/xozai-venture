@@ -6,7 +6,7 @@ description: >
   venture in any space, as a US C-Corp. Researcher supplies benchmarks and
   comparables, Codex the build effort, HermesX and Scribe the GTM cost;
   Claude assembles assumptions and runs the deterministic engine.
-version: 1
+version: 2
 ---
 
 # Skill 4 — Financial model
@@ -27,17 +27,18 @@ the model is an input to the pick). Re-run after `product-build` Stage A
   (content/brand cost), three scenarios.
 - Build effort: `product/ARCHITECTURE.md` milestones if Skill 2 has run;
   otherwise Codex's estimate posted in-channel.
-- Schema: `product/finance/schema.json`. Engine: `product/finance/engine/`.
+- Schema: `product/finance/schema.json`. Engine + xlsx export: `product/finance/engine/`.
+- Fixtures and test plan: `product/finance/tests/` (Honey0).
 
 ## Roles
 | Who | Does |
 |---|---|
 | Claude | Owns assumptions assembly, runs engine, writes memo, reviews |
 | Researcher | Benchmarks + comparables with sources |
-| Codex | Build-effort estimate; builds/maintains the engine |
+| Codex | Build-effort estimate |
 | HermesX | GTM plan cost (headcount ramp, channels, events, pilots) |
 | Scribe | Content/brand/paid-media cost |
-| Fizz0 | Exports (MD/CSV/XLSX) |
+| Codex | Builds/maintains the engine and the .xlsx export |
 | Honey0 | Fixtures, reconciliation tests, warnings |
 | joseleos | Brief, funding plan, scenario intent; accepts the model |
 
@@ -68,11 +69,18 @@ the model is an input to the pick). Re-run after `product-build` Stage A
 5. **Check.** Engine fails if cash does not reconcile period to period, if
    headcount cost ≠ roster × loaded rate, or if any material assumption is
    missing. Honey0's fixtures run in CI.
-6. **Write.** `product/finance/<VENTURE>/MODEL.md`: one-page memo (what
-   it costs, when it pays back, capital needed, the five assumptions that
-   move the answer most) + the tables. Fizz0 exports `model.xlsx`/`.csv`
-   with tabs Assumptions, Revenue, Headcount, OpEx, Statements, Cash,
-   Metrics, Scenarios, Sources. Narrative totals must match export totals.
+6. **Write.** The primary deliverable is `product/finance/<VENTURE>/model.xlsx`
+   (joseleos, 2026-08-30), produced by the engine: tabs Assumptions, Revenue,
+   Headcount, OpEx, Statements, Cash, Metrics, Scenarios, Checks, Sources.
+   Workbook conventions (pattern sources, Apache-2.0: anthropics/skills
+   `skills/xlsx`; anthropics/financial-services `xlsx-author` and
+   `3-statement-model`): real formulas in calc cells, inputs only on the
+   Assumptions tab (blue), formulas black, cross-sheet links green, named
+   ranges for externally referenced cells, a Checks tab of TRUE/FALSE
+   reconciliation cells, and a scenario selector that switches all tabs.
+   Alongside it, `MODEL.md`: one-page memo (what it costs, when it pays
+   back, capital needed, the five assumptions that move the answer most) +
+   the tables. Narrative totals must match workbook totals (Honey0 TC-07).
 7. **Review.** Claude posts the memo in-channel and @mentions joseleos.
    Overrides go into the `override` field, never edited in place; re-run.
 
