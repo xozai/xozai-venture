@@ -1,6 +1,6 @@
-# Jerry — civil-engineering software venture
+# Xozai venture — civil-engineering software startup
 
-Monorepo for the Xozai civil-engineering startup pipeline: the agent skills that
+Monorepo for the Xozai startup pipeline (a venture separate from the Jerry Project): the agent skills that
 run the pipeline, the research that feeds it, and everything the team produces
 (product, website, marketing).
 
@@ -10,10 +10,10 @@ run the pipeline, the research that feeds it, and everything the team produces
 | `.claude/skills/product-build/` | Skill 2 — architecture → build → QA → bug-fix loop |
 | `.claude/skills/go-to-market/` | Skill 3 — GTM plan, marketing research, campaign content |
 | `docs/PLAN.md` | The pipeline plan: roles, stage gates, artifacts |
-| `research/` | Discovery outputs (opportunity scan, marketability rubric) |
+| `research/` | Discovery outputs; `research/prior-art/` holds the Jerry Project scan as reference only |
 | `product/` | The selected product's source code |
 | `website/` | Marketing site |
 | `marketing/` | GTM plan, positioning, campaign content |
 
 Start with `docs/PLAN.md`. Each skill's `SKILL.md` is a self-contained playbook
-an orchestrating agent can follow from the Buzz `Jerry Project` channel.
+an orchestrating agent can follow from the Buzz `Xozai` channel.

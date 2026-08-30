@@ -20,4 +20,4 @@
 - Every artifact goes in the directory the skill names. Do not scatter docs.
 - Cite sources: research claims carry URLs; engineering claims carry file paths or test output.
 - Commit author: the accountable human (joseleos). Agents that materially authored code add `Co-authored-by`.
-- Coordination happens in the Buzz `Jerry Project` channel (`449a9d80-76c9-4b70-9c34-0608621d5a19`). Do not run the same stage from two channels.
+- Coordination happens in the Buzz `Xozai` channel (`63a6c63a-4c04-4339-b140-90f49453a1c8`). Xozai is a separate venture from the Jerry Project (channel `449a9d80-…`); do not mix their artifacts or decisions.

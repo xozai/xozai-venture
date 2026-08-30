@@ -11,9 +11,10 @@ version: 1
 
 ## When to run
 - Starting a venture search, or re-running for a second product.
-- Closing evidence gaps on an existing shortlist (the normal case now — see
-  `research/OPPORTUNITY_SCAN_2026-08-30.md`; do **not** restart from zero if a
-  scan exists, extend it).
+- Closing evidence gaps on an existing shortlist (if a scan exists in
+  `research/`, extend it rather than restarting). `research/prior-art/` holds
+  another venture's scan — use it for method and coverage, not as this
+  venture's shortlist.
 
 ## Roles
 | Who | Does |

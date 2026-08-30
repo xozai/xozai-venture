@@ -1,4 +1,4 @@
-# Jerry pipeline plan — skills for launching a civil-engineering software startup
+# Xozai venture pipeline plan — skills for launching a civil-engineering software startup
 
 Owner: joseleos. Orchestrator: Claude. Created 2026-08-30.
 
@@ -38,11 +38,11 @@ quotes with URLs (3–5), budget holder + dollar authority, current workaround,
 stamped-deliverable touch (yes/no/assists), named incumbents + public pricing,
 2–3 venues where the audience gathers, and discipline tag.
 
-Current state: pass 1 is **done** (`research/OPPORTUNITY_SCAN_2026-08-30.md`).
-Top pick: OPCC / engineer's-cost-estimate exhibit automation. Runner-up: MUTCD
-traffic-control-plan generation. Open gaps before decision-ready: OPCC-specific
-verbatim quotes, incumbent pricing for #1/#2, budget-holder sizing. The skill's
-first run should close those gaps rather than restart discovery.
+Current state: **not started for Xozai.** A scan from the separate Jerry Project
+venture is kept in `research/prior-art/` as reference for method and candidate
+coverage only — Xozai runs its own discovery pass and makes its own pick.
+Whether Xozai must exclude Jerry Project's candidates (OPCC, TCP) is an open
+question for joseleos.
 
 Exit: joseleos posts "pick: <candidate>" in the channel. That message is the gate.
 
@@ -86,14 +86,11 @@ Exit: joseleos approves the campaign; assets live in `marketing/`, site in
 
 ## Repo
 
-`xozai/jerry` (this repo) holds skills, research, product, website, marketing.
+`xozai/xozai-venture` (this repo) holds skills, research, product, website, marketing.
 One repo so cross-references (rubric → positioning → copy; architecture →
 tests) are relative links, not hunts across accounts.
 
-## Open question for joseleos
+## Decision (joseleos, 2026-08-30)
 
-Fizz0 flagged that this pipeline is already running in the Jerry Project
-channel with the same roles. Assumption taken here: the Xozai request
-*formalizes* that work into reusable skills, and Skill 1 resumes from the
-existing shortlist. If Xozai is meant to be a separate venture, say so and
-Skill 1 will run from scratch in this repo instead.
+Xozai and Jerry Project are **different ventures**. This repo and these skills
+belong to Xozai; Skill 1 runs a fresh discovery pass here.

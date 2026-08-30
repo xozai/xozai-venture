@@ -1,7 +1,7 @@
 ---
 name: product-build
 description: >
-  Turn the selected civil-engineering problem into a shipped v1. Claude (senior)
+  Turn the selected problem into a shipped v1. Claude (senior)
   and Codex (junior) design the architecture; Codex and Fizz0 build; Honey0
   writes and runs tests; Codex triages bugs to Pollen0.
 version: 1
