@@ -2,6 +2,7 @@
   "schema_version": "1.0.0",
   "venture": "strata",
   "scenario": "downside",
+  "ventureType": "saas",
   "currency": "USD",
   "monthly": [
     {
@@ -774,6 +775,22 @@
       "revenue": 107510.69,
       "cashEnding": -4471.88,
       "capitalNeed": 31556.91
+    }
+  ],
+  "overrides": [
+    {
+      "path": "meta.opening_cash",
+      "sourcedValue": 25000,
+      "override": 10000,
+      "source": "assumption: company cash at launch not yet stated by joseleos — PLACEHOLDER, please override | override: joseleos 2026-08-30 15:23 (event 7a9ad457) 'assume under $10,000' → modeled at the $10k ceiling",
+      "date": "2026-08-30"
+    },
+    {
+      "path": "formation_legal.items[0].name",
+      "sourcedValue": "Delaware C-Corp formation (Clerky/Stripe Atlas incl. 83(b), IP assignment)",
+      "override": "Delaware Public Benefit Corporation formation (incl. 83(b), IP assignment)",
+      "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming — may already be spent | override: joseleos 2026-08-30 15:23 — entity is a PBC (state assumed Delaware; taxed as a C-Corp, same franchise tax)",
+      "date": "2026-08-30"
     }
   ],
   "checks": [
