@@ -3,6 +3,9 @@
 Hand-computed, then verified by running `product/finance/engine/calculate.ts` directly against
 `assumptions.base.json` / `.upside.json` / `.downside.json` on 2026-08-30. Every figure below is
 the engine's actual output, not a projection — re-verify after any engine change.
+Re-verified 2026-08-30 against the committed engine on main (PR #16, commit `c131489`) via
+`product/finance/engine/test/fixtures.test.ts`: every figure below is unchanged by the
+cohort-based churn rewrite.
 
 ## Fixed monthly recurring cost (base)
 personnel cash (Engineer 1 only; founder is 100% deferred) $12,000 + ga_ops $2,000 + rnd $150 +
@@ -67,9 +70,9 @@ rather than growing linearly — by month 24 it's 10.81 active logos vs. base's 
    integers; there is no day field. A new hire "starting mid-month" is charged the full monthly
    loaded rate for that month, or none at all — there is no proration. TC-02's mid-month-start
    sub-case tests this (the *absence* of proration), not a proration formula.
-2. **No per-item start delay for revenue.** Cost sections (`formation_legal`, `ga_ops`, `rnd`,
-   `sales_marketing`) each have `start_month`/`end_month` per item, but `revenue` is one global
-   block with no equivalent — logo accrual begins month 1 unconditionally. A venture with a
-   pre-revenue ramp (e.g., UCM's likely sales-cycle lag) can only approximate a delay via a low
-   or negative `new_logo_growth_monthly_pct`, which distorts the whole curve rather than cleanly
-   zeroing early months. Worth raising with Codex/Claude before the UCM model is assembled.
+2. ~~No per-item start delay for revenue.~~ **Resolved in PR #16** (`revenue.start_month`,
+   `intro_discount_pct`, `intro_discount_months`, cohort-tracked). This fixture doesn't use the
+   new fields (it predates them and its numbers are unaffected — see `TEST_PLAN.md`'s CI note),
+   but `saas-tiny`'s base assumptions are reused with `start_month`/discount overrides in TC-08 to
+   cover the cohort semantics, and UCM's real assumptions (`product/finance/ucm/
+   assumptions.base.json`) now set `revenue.start_month: 8` for its pre-revenue ramp.

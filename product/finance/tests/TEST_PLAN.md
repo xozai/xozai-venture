@@ -8,6 +8,13 @@ number in this plan and in the two fixtures' `EXPECTED.md` was verified by actua
 `calculate()` against the fixtures on 2026-08-30, not just hand-derived. Re-verify after any
 engine change; if a number here stops matching, the engine (or this plan) has a regression.
 
+**Wired into CI:** every case below runs as `product/finance/engine/test/fixtures.test.ts`
+(`npm test`). Re-verified 2026-08-30 against the committed engine (main, Codex's PR #16 /
+schema+xlsx retry commit `c131489`) — cohort-based churn produces byte-identical figures to the
+ones below for both fixtures, since neither uses `revenue.start_month`/`intro_discount_pct`
+(uniform per-month churn applied per cohort sums identically to the old aggregate formula when
+every cohort ages at the same rate). No `EXPECTED.md` numbers changed.
+
 Two hand-computable fixtures live in `product/finance/tests/fixtures/`:
 - `saas-tiny/` — subscription revenue, one paid engineer, one deferred-comp founder, no
   financing. Needs real runway (capital need $90,800 beyond its $50,000 starting cash). Three
@@ -129,6 +136,33 @@ unrounded source cell. **Not yet testable** — `calculate()` and `cli.ts` produ
 Markdown tables (`toMarkdown()`) but no prose memo; that's Claude's assembly step, still pending.
 This test case is written now so it's ready the first time a real `MODEL.md` (e.g. for UCM)
 exists to check.
+
+### TC-08 — `revenue.start_month` and `intro_discount_pct`/`intro_discount_months` apply per cohort
+**Preconditions:** `fixtures/saas-tiny/assumptions.base.json`, with `revenue.start_month: 3`,
+`intro_discount_pct: 0.5`, `intro_discount_months: 2` set on a copy of the input (the checked-in
+fixture files don't use these fields; UCM's real assumptions do — see `product/finance/ucm/
+assumptions.base.json`'s `revenue.start_month: 8`).
+**Steps:** run `calculate()`, inspect `monthly[].revenue` and `.newLogos` month by month.
+**Expected (verified 2026-08-30):** months 1–2 revenue = 0 (before `start_month`). Month 3 (first
+paid month): 1 new logo, revenue = $500 (its own first month, discounted 50%). Month 4: two
+cohorts (acquired month 3 and 4), both still inside their 2-month discount window, revenue =
+$1,000. Month 5: the month-3 cohort ages out of the discount (full $1,000/mo), the month-4 and
+month-5 cohorts are still discounted ($500 each) = $2,000. Confirms the discount is per-cohort
+(tracked from each cohort's own acquisition month), not a global ramp applied to total revenue.
+
+### TC-09 — xlsx workbook Checks tab passes and Statements totals equal the engine JSON
+**Preconditions:** `product/finance/ucm/assumptions.{base,upside,downside}.json` (the real UCM
+assumptions, not a synthetic fixture — chosen because it's the first venture to exercise
+`revenue.start_month`).
+**Steps:** run `calculate()` on all three, `writeWorkbook()` to a temp directory (not committed —
+keeps CI hermetic and avoids a stale binary artifact), reopen with ExcelJS, read back the
+`Checks` tab's three formula cells' cached results and sum the `Statements` tab's `Revenue` and
+`Operating income` columns (cached formula results; a `result` of exactly `0` is dropped by
+ExcelJS on write/read and must be treated as `0`, not `NaN`).
+**Expected (verified 2026-08-30):** all three `Checks` rows cache `true`. Summed `Statements`
+`Revenue` and `Operating income` columns equal the sum of the engine JSON's own `monthly[].revenue`
+/ `.operatingIncome` (24-month slice) to the cent. This is TC-07's workbook half — the narrative
+(`MODEL.md` prose-vs-cell) half remains **not yet testable** until a UCM `MODEL.md` exists.
 
 ## Out of scope for this plan
 - Exact scenario-by-scenario hand-computed tables for `upside`/`downside` beyond the
