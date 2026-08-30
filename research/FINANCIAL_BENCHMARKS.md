@@ -39,9 +39,12 @@ rather than a UCM-specific data point — flagged per row.
 | Cyber liability, seed-stage-appropriate | 500–3,000 | USD/yr | [Hotaling / Vouch cyber insurance ranges, SaaS startup insurance 2026](https://hotalinginsurance.com/hotaling-insurance-blog/saas-insurance-in-2025-costs-coverage-vc-essentials) | 2026 | M |
 | Tech E&O, seed-stage-appropriate floor | ~5,000 | USD/yr | [Vouch: Startup Insurance Costs 2026](https://www.vouch.us/blog/startup-insurance-costs) | 2026 | L — floor of a range built for a scaling company, not pre-revenue |
 | Bookkeeping/payroll compliance (basic, pre-Series A) | not skimped but no dollar figure found; budget as fractional bookkeeper/month | — | [indinero: Finance as a Service by Stage](https://www.indinero.com/blog/finance-as-a-service-by-stage) | 2026 | L |
-| Software/tooling per head | not directly sourced this pass; carry forward `SKILL.md` placeholder | USD/head/mo | — | — | L |
+| Payroll provider, Gusto Simple (base + per-employee), 2–5 person team | 49 base + 6/employee → 61–79/mo total | USD/mo | [Gusto pricing 2026, via Workstream](https://www.workstream.us/blog/gusto-pricing) | 2026 | H — direct vendor pricing page, matches UCM's team size |
+| Payroll provider, Rippling (core platform + payroll module), alternative | 35 base + ~8/employee for payroll, ~20–35/employee all-in once HR/benefits modules added | USD/mo | [Pin: Rippling Pricing 2026](https://www.pin.com/blog/rippling-pricing/) | 2026 | M — modular/quote-based, less transparent than Gusto for a lean team; use Gusto as base case |
+| Software/tooling per head, engineering-specific (tools + infra) | 150–400 | USD/engineer/mo | [Sasanova: SaaS Spending Benchmarks 2026](https://www.sasanova.com/guides/saas-spending-benchmarks-2026) | 2026 | M |
+| Software/tooling per head, seed/Series A companies <50 employees (whole-stack, all functions) | 117–200 (1,400–2,400/yr) | USD/employee/mo | [Cledara: Average SaaS Spend Per Employee 2026](https://www.cledara.com/blog/average-saas-spend-per-employee-2026) | 2026 | M |
 
-**Gap flagged:** no dollar-specific bookkeeping/payroll-provider (e.g. Gusto, Rippling) monthly fee or software-per-head figure was pulled this pass — both need a follow-up search or a direct vendor-pricing check before the base-case JSON is finalized.
+**Applied to UCM:** for a 2–5 person team, base case **Gusto Simple (~$61–79/mo total, not per-head)** for payroll, and **~$150–200/head/mo** for software/tooling — nearer the engineering-specific band than the broader $400–600/mo band, since that higher figure reflects 10–50-person companies past the lean pre-revenue stage UCM starts in.
 
 ## 3. `personnel`
 
@@ -115,13 +118,13 @@ Not applicable to UCM base case (bootstrapped, no round). No benchmark pulled th
 
 ## Confidence summary for Claude's assembly step
 
-- **H (UCM-specific, use directly):** Codex's build estimate and API cost rows; Civil 3D pricing anchor.
-- **M (general SaaS/startup benchmark, reasonable default):** formation/legal costs, loaded-personnel multiplier and engineer salary bands, SaaS gross margin, self-serve CAC/payback, SMB churn band.
-- **L (weak analog or gap, needs a follow-up pass or joseleos override before the model is presented as decision-grade):** software-per-head and bookkeeping/payroll-provider dollar figures, cloud/hosting cost, ad hoc counsel budget, win rate, PlanGrid/Procore comparables, AI-native 25% gross margin (excluded from the UCM recommendation).
+- **H (UCM-specific, use directly):** Codex's build estimate, API cost, and cloud/hosting run-rate rows (`product/finance/ucm/BUILD_ESTIMATE.md`, $300–600/mo at 10 users); Civil 3D pricing anchor; Gusto payroll pricing (direct vendor page, matches team size).
+- **M (general SaaS/startup benchmark, reasonable default):** formation/legal costs, loaded-personnel multiplier and engineer salary bands, SaaS gross margin, self-serve CAC/payback, SMB churn band, software/tooling per head.
+- **L (weak analog or gap, needs a follow-up pass or joseleos override before the model is presented as decision-grade):** ad hoc counsel budget, win rate, PlanGrid/Procore comparables, AI-native 25% gross margin (excluded from the UCM recommendation), Rippling pricing (quote-based, kept only as an alternative reference to Gusto).
 
 ## Open follow-ups (next Researcher pass)
 
-1. Cloud/hosting monthly cost for a pre-scale B2B SaaS (no benchmark pulled this pass).
-2. Payroll-provider (Gusto/Rippling-class) and per-head software-tooling monthly fees — currently unsourced placeholders in `ga_ops`.
+1. ~~Cloud/hosting monthly cost~~ — resolved: already covered by Codex's `BUILD_ESTIMATE.md` run-rate table ($300–600/mo at 10 users), confirmed with Claude 2026-08-30, no separate benchmark needed.
+2. ~~Payroll-provider and per-head software-tooling monthly fees~~ — resolved this pass: Gusto Simple ($61–79/mo for a 2–5 person team) and engineering-tooling ($150–200/head/mo) rows added to `ga_ops` above.
 3. Win-rate benchmark for low-touch, card-purchase, individual-professional-buyer SaaS — none found; current recommendation is to leave as an unvalidated assumption rather than force-fit an unrelated vertical's number.
 4. SPM-track benchmarks (enterprise incentive-comp space) are out of scope for this pass — this file covers CIVIL/UCM only, per the critical-path request in-thread. A separate SPM benchmarks pass is needed before any SPM candidate reaches financial-model stage.
