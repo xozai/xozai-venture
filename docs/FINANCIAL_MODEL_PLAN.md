@@ -33,7 +33,7 @@ Skill 3 (real CAC replaces benchmark CAC).
 | Build effort (eng-days, team shape, infra) | Codex | thread reply 2026-08-30 06:06 (18–29 eng-days MVP for the *skill*; per-venture build effort comes from Skill 2 Stage A) | received |
 | GTM plan cost (channels, sales headcount ramp, OTE, tooling, events, pilots) | HermesX | `marketing/GTM_COST_MODEL.md` | requested |
 | Content/brand cost (site, SEO, paid, design, PR, collateral) | Scribe | `marketing/GTM_COST_MODEL.md` (same file, Scribe section) | requested |
-| Venture brief, horizon, funding plan, pricing intent, scenario definitions | joseleos | `product/FINANCIAL_BRIEF_<VENTURE>.md` | open |
+| Venture brief, horizon, funding plan, pricing intent, scenario definitions | joseleos | `product/FINANCIAL_BRIEF_UCM.md` | answered 2026-08-30; brief drafted |
 
 ## Design decisions (Claude; joseleos may veto)
 
@@ -108,9 +108,9 @@ shorter with Codex/Fizz0 in parallel on 2 and 6. A prompt-only prototype
 - **G4**: first venture model reviewed by joseleos; then the skill is
   "done" and re-runnable per venture.
 
-## Open questions for joseleos (batched)
+## Answers from joseleos (2026-08-30)
 
-1. Horizon default: 3 years or 5? (Plan assumes 3, with 5 as an option.)
-2. Founder salaries in the model from day 1, or deferred until funding?
-3. Funding assumption: bootstrapped, one SAFE, or seed round — size and month?
-4. First worked example: CIVIL UCM (top-scored) or SPM lead A?
+1. Horizon default: **3 years** (5 remains an option per brief).
+2. Founder salaries: **deferred until funding** — shown as a memo line, $0 cash.
+3. Funding: **bootstrapped** — no round in base case; model reports cash need to break-even.
+4. First worked example: **CIVIL UCM** — brief in `product/FINANCIAL_BRIEF_UCM.md`.
