@@ -55,4 +55,4 @@ communication layer (plan design, dispute handling, comp communication) — not 
 calculation engine, which is both the contested mid-market ground and where a
 wrong number becomes a wage claim.
 
-**Status:** sweep not started. Output → `research/OPPORTUNITY_SCAN_SPM_<date>.md`.
+**Status:** pass 1 done — `research/OPPORTUNITY_SCAN_SPM_2026-08-30.md` (10 candidates; leads A comp-analytics copilot, D dispute explainer). Awaiting Scribe scoring + Hermes rank.
