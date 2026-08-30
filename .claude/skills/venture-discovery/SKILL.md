@@ -68,6 +68,13 @@ version: 1
 - `research/DECISION_MEMO_<date>.md`.
 - `docs/DECISIONS.md` entry with the pick and date.
 
+## Exclusions (joseleos, 2026-08-30)
+Xozai must **not** pursue problems the Jerry Project venture is already on:
+- OPCC / engineer's opinion of probable cost exhibit automation
+- Traffic Control Plan (MUTCD) generation
+Drop them from the candidate list before scoring. If Jerry's pick changes, update
+this list via `docs/DECISIONS.md`.
+
 ## Anti-patterns
 - Re-running the sweep when a scan exists. Extend it.
 - Letting market size leak into the marketing column.
