@@ -87,9 +87,9 @@ def build(scn, eng2_start, seats, seat_price, logos_m, growth, churn_m, sm_extra
 
 upside_sm = [
   cost("A5-U SEO tooling — Ahrefs Lite (from m10)", 129, "monthly", 10, 0, GTMA, "H"),
-  cost("A9 Contract technical writer", 2000, "monthly", 8, 0, GTMA, "L"),
+  cost("A9 Contract technical writer — FHWA/DOT informational queries", 2000, "monthly", 8, 0, GTMA, "L"),
   cost("A10 Contract video editor", 1500, "monthly", 10, 0, GTMA, "L"),
-  cost("A11 Paid search, high-intent (volume-capped)", 1200, "monthly", 12, 0, GTMA + " — Researcher search-volume check pending", "L"),
+  cost("A11 Paid search — bounded 3-month falsification test (kill: <3 qualified trials)", 500, "monthly", 12, 14, GTMA + " rev #15 (Researcher population bound 2026-08-30)", "M"),
   cost("A12 Launch collateral + brand refresh", 6000, "one_time", 9, 9, GTMA, "L"),
   cost("B1 CRM + outbound tooling", 99, "monthly", 12, 0, GTMB, "L"),
   cost("B2 UESI/APWA exhibit booth + travel (m14)", 8000, "one_time", 14, 14, GTMB + " — quote required", "L"),

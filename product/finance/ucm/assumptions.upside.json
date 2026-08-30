@@ -1527,7 +1527,7 @@
       },
       {
         "name": {
-          "value": "A9 Contract technical writer",
+          "value": "A9 Contract technical writer \u2014 FHWA/DOT informational queries",
           "unit": "text",
           "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12)",
           "date": "2026-08-30",
@@ -1621,27 +1621,27 @@
       },
       {
         "name": {
-          "value": "A11 Paid search, high-intent (volume-capped)",
+          "value": "A11 Paid search \u2014 bounded 3-month falsification test (kill: <3 qualified trials)",
           "unit": "text",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) \u2014 Researcher search-volume check pending",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "amount": {
-          "value": 1200,
+          "value": 500,
           "unit": "USD",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) \u2014 Researcher search-volume check pending",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "benchmark"
         },
         "cadence": {
           "value": "monthly",
           "unit": "cadence",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) \u2014 Researcher search-volume check pending",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
           "date": "2026-08-30",
           "confidence": "H",
           "override": null,
@@ -1650,18 +1650,18 @@
         "start_month": {
           "value": 12,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) \u2014 Researcher search-volume check pending",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "end_month": {
-          "value": 0,
+          "value": 14,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) \u2014 Researcher search-volume check pending",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7A (Scribe, merged #12) rev #15 (Researcher population bound 2026-08-30)",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         }
