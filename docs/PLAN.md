@@ -1,4 +1,4 @@
-# Xozai venture pipeline plan — skills for launching a civil-engineering software startup
+# Xozai venture pipeline plan — skills for launching a software startup in any space
 
 Owner: joseleos. Orchestrator: Claude. Created 2026-08-30.
 
@@ -20,9 +20,10 @@ to actually follow and lets a phase be re-run without re-running the others
 
 ## Skill 1 — `venture-discovery`
 
-Goal: a ranked shortlist of civil-engineering problems that software automation
-could solve, scored on four **separate** axes, and a one-page decision memo so
-joseleos can pick one.
+Goal: a ranked shortlist of problems in the target space that software
+automation could solve, scored on four **separate** axes, and a one-page
+decision memo so joseleos can pick one. The space is a parameter
+(`research/spaces/<SPACE>.md`); the skill contains no space-specific content.
 
 Four axes (from the brief), each 1–5:
 1. **Effort to build** (inverse — lower effort scores higher)
@@ -30,19 +31,18 @@ Four axes (from the brief), each 1–5:
 3. **Ease of marketing** — scored with Scribe's 7-dimension rubric
    (`research/MARKETABILITY_RUBRIC.md`). Rule: *ease of marketing ≠ market size*.
    Market size belongs on axis 2 only.
-4. **Our ability to build it** — lean AI-native team, no CAD/FEA engine, no
-   procurement sales motion.
+4. **Our ability to build it** — lean AI-native team, no specialised
+   engine, no procurement sales motion.
 
 Per-candidate evidence Researcher must capture (Scribe's list): verbatim pain
 quotes with URLs (3–5), budget holder + dollar authority, current workaround,
-stamped-deliverable touch (yes/no/assists), named incumbents + public pricing,
-2–3 venues where the audience gathers, and discipline tag.
+liability-analog touch (yes/no/assists), named incumbents + public pricing,
+2–3 venues where the audience gathers, and sub-area tag.
 
-Current state: **not started for Xozai.** A scan from the separate Jerry Project
-venture is kept in `research/prior-art/` as reference for method and candidate
-coverage only — Xozai runs its own discovery pass and makes its own pick.
-Whether Xozai must exclude Jerry Project's candidates (OPCC, TCP) is an open
-question for joseleos.
+Current state: two tracks scanned (`research/spaces/CIVIL_ENGINEERING.md`,
+`research/spaces/ENTERPRISE_SPM.md`); memos pending. Other ventures' scans in
+`research/prior-art/` are reference for method only. Exclusions live in each
+space profile.
 
 Exit: joseleos posts "pick: <candidate>" in the channel. That message is the gate.
 
@@ -71,15 +71,17 @@ bugs.
 Goal: a GTM plan and a ready-to-run campaign for the shipped product.
 
 Gate (Scribe's rule): no content drafting until three inputs exist — named
-audience (discipline + role + firm size), the named incumbent/workaround being
-replaced, and the verbatim quotes. Sequence: Hermes's GTM plan and positioning
-are signed off by joseleos **first**; Scribe's campaign assets **second**.
+audience (role + segment + organisation size), the named incumbent/workaround
+being replaced, and the verbatim quotes. Sequence: Hermes's GTM plan and
+positioning are signed off by joseleos **first**; Scribe's campaign assets
+**second**.
 
-Civil-specific channel hard-coded into the skill: **PDH-credit webinars** — PEs
-need continuing-education hours and will attend vendor webinars to earn them.
-Also: state PE society newsletters, ASCE branch meetings, Eng-Tips /
-r/civilengineering, YouTube "how do I do X in <tool>" SEO, discipline
-conferences.
+Channels are not hard-coded in the skill. They come from the space profile,
+which must answer: native incentive the audience already needs (e.g.
+continuing-education credit), associations/publications, peer communities,
+search intent, events. Civil's list (PDH webinars first, PE societies, ASCE,
+Eng-Tips, tutorial SEO) is the worked example in
+`research/spaces/CIVIL_ENGINEERING.md`.
 
 Exit: joseleos approves the campaign; assets live in `marketing/`, site in
 `website/`.
