@@ -49,7 +49,11 @@ channel before Scribe starts.
    preview; Scribe reviews rendered copy.
 5. **Sign-off** — joseleos approves; campaign calendar in `marketing/CALENDAR.md`.
 
-## Civil-specific channels (hard-coded, use before generic playbooks)
+## Space-specific channels
+Take the channel list from `research/spaces/<SPACE>.md` first. For civil, the
+list below is hard-coded because it is unusual:
+
+### Civil-specific channels (use before generic playbooks)
 - **PDH-credit webinars** — PEs need continuing-education hours to keep their
   license and will attend vendor webinars to earn them. The highest-leverage
   top-of-funnel motion in this vertical; plan one in the first 60 days.

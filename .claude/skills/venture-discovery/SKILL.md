@@ -1,7 +1,9 @@
 ---
 name: venture-discovery
 description: >
-  Find and rank civil-engineering problems that software automation could solve.
+  Find and rank problems in a target space that software could solve. Space is a
+  parameter: read `research/spaces/<SPACE>.md` for scope, exclusions, buyers,
+  incumbents, complaint sources, channels, and the liability analog.
   Orchestrates Researcher (evidence), Scribe (marketability axis), Hermes
   (ranking) and produces a decision memo for joseleos to pick a product.
 version: 1
@@ -26,7 +28,10 @@ version: 1
 | joseleos | Picks. Nothing downstream starts until the pick is posted |
 
 ## Inputs
-- Scope statement from joseleos (space, constraints, team size).
+- **Space profile** `research/spaces/<SPACE>.md` — create one from joseleos's
+  scope statement if it doesn't exist (see `CIVIL_ENGINEERING.md`,
+  `ENTERPRISE_SPM.md` for the template). Each space is its own track with its
+  own scan file and memo; joseleos picks across tracks.
 - Existing scan and rubric in `research/` if present.
 
 ## Steps
@@ -34,9 +39,8 @@ version: 1
    profile of a high-marketability candidate and where unprompted complaints
    surface (Eng-Tips, r/civilengineering, YouTube tutorial comments, PE-society
    forums, job postings). Find *new* candidates, not leftovers from prior art.
-   **Candidate list.** Researcher sweeps disciplines: transportation, water/
-   wastewater, structural, geotechnical, land development/site, construction
-   estimating. Target 8–12 candidates. Each gets a discipline tag first —
+   **Candidate list.** Researcher sweeps the sub-areas listed in the space
+   profile. Target 8–12 candidates. Each gets a discipline/sub-area tag first —
    nothing scores on channel fit without one.
 2. **Evidence per candidate** (Researcher; items 1 and 3 are the expensive ones
    to reconstruct later, capture them on first contact):
@@ -46,7 +50,8 @@ version: 1
       tool, offshore drafting. **Required sub-field: self-built vs named
       commercial tool** — self-built gives the wedge "replaces the thing you
       built yourself"; a named incumbent means "better than X" on their terms.
-   4. Does the output touch a stamped deliverable? yes / no / assists.
+   4. Does the output touch the space's liability analog (civil: a stamped
+      deliverable; SPM: money paid or booked)? yes / no / assists.
    5. Named incumbents with public pricing.
    6. Where the audience gathers: 2–3 specific venues, rough size.
    7. Discipline tag.
@@ -70,16 +75,13 @@ version: 1
    message of the form `pick: <candidate>`. Record it in `docs/DECISIONS.md`.
 
 ## Outputs
-- `research/OPPORTUNITY_SCAN_<date>.md` — ranked table + per-candidate evidence.
+- `research/OPPORTUNITY_SCAN[_<SPACE>]_<date>.md` — ranked table + per-candidate evidence.
 - `research/DECISION_MEMO_<date>.md`.
 - `docs/DECISIONS.md` entry with the pick and date.
 
-## Exclusions (joseleos, 2026-08-30)
-Xozai must **not** pursue problems the Jerry Project venture is already on:
-- OPCC / engineer's opinion of probable cost exhibit automation
-- Traffic Control Plan (MUTCD) generation
-Drop them from the candidate list before scoring. If Jerry's pick changes, update
-this list via `docs/DECISIONS.md`.
+## Exclusions
+Live in the space profile. Civil (joseleos, 2026-08-30): OPCC exhibits and MUTCD
+traffic-control plans belong to the Jerry Project venture — drop before scoring.
 
 ## Anti-patterns
 - Re-running the sweep when a scan exists. Extend it.
