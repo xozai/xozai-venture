@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xozai.com/schemas/financial-model/v1.json",
+  "title": "Xozai venture financial model assumptions",
+  "type": "object",
+  "required": ["schema_version", "meta", "formation_legal", "ga_ops", "personnel", "rnd", "sales_marketing", "cogs", "revenue", "financing"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "meta": { "$ref": "#/$defs/meta" },
+    "formation_legal": { "$ref": "#/$defs/costSection" },
+    "ga_ops": { "$ref": "#/$defs/costSection" },
+    "personnel": { "$ref": "#/$defs/personnel" },
+    "rnd": { "$ref": "#/$defs/costSection" },
+    "sales_marketing": { "$ref": "#/$defs/costSection" },
+    "cogs": { "$ref": "#/$defs/cogs" },
+    "revenue": { "$ref": "#/$defs/revenue" },
+    "financing": { "$ref": "#/$defs/financing" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "assumption": {
+      "type": "object",
+      "required": ["value", "unit", "source", "date", "confidence", "override", "kind"],
+      "properties": {
+        "value": { "type": ["string", "number", "boolean"] },
+        "unit": { "type": "string" },
+        "source": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "format": "date" },
+        "confidence": { "enum": ["H", "M", "L"] },
+        "override": { "type": ["string", "number", "boolean", "null"] },
+        "kind": { "enum": ["benchmark", "derived", "input"] }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "required": ["venture", "scenario", "currency", "start_month", "horizon_months", "opening_cash"],
+      "properties": {
+        "venture": { "$ref": "#/$defs/assumption" }, "scenario": { "$ref": "#/$defs/assumption" }, "venture_type": { "$ref": "#/$defs/assumption" },
+        "currency": { "$ref": "#/$defs/assumption" }, "start_month": { "$ref": "#/$defs/assumption" },
+        "horizon_months": { "$ref": "#/$defs/assumption" }, "opening_cash": { "$ref": "#/$defs/assumption" }
+      }, "additionalProperties": false
+    },
+    "costItem": {
+      "type": "object", "required": ["name", "amount", "cadence", "start_month", "end_month"],
+      "properties": { "name": { "$ref": "#/$defs/assumption" }, "amount": { "$ref": "#/$defs/assumption" }, "cadence": { "$ref": "#/$defs/assumption" }, "start_month": { "$ref": "#/$defs/assumption" }, "end_month": { "$ref": "#/$defs/assumption" }, "basis": { "$ref": "#/$defs/assumption" }, "rate": { "$ref": "#/$defs/assumption" }, "notes": { "$ref": "#/$defs/assumption" } },
+      "additionalProperties": false
+    },
+    "costSection": { "type": "object", "required": ["items"], "properties": { "items": { "type": "array", "items": { "$ref": "#/$defs/costItem" } } }, "additionalProperties": false },
+    "person": {
+      "type": "object", "required": ["role", "headcount", "start_month", "end_month", "annual_base", "employer_tax_pct", "benefits_pct", "equipment", "founder", "defer_until_funding"],
+      "properties": { "role": { "$ref": "#/$defs/assumption" }, "headcount": { "$ref": "#/$defs/assumption" }, "start_month": { "$ref": "#/$defs/assumption" }, "end_month": { "$ref": "#/$defs/assumption" }, "annual_base": { "$ref": "#/$defs/assumption" }, "employer_tax_pct": { "$ref": "#/$defs/assumption" }, "benefits_pct": { "$ref": "#/$defs/assumption" }, "equipment": { "$ref": "#/$defs/assumption" }, "founder": { "$ref": "#/$defs/assumption" }, "defer_until_funding": { "$ref": "#/$defs/assumption" }, "variable_annual": { "$ref": "#/$defs/assumption" }, "attainment_pct": { "$ref": "#/$defs/assumption" } },
+      "additionalProperties": false
+    },
+    "personnel": { "type": "object", "required": ["roster"], "properties": { "roster": { "type": "array", "items": { "$ref": "#/$defs/person" } } }, "additionalProperties": false },
+    "cogs": { "type": "object", "required": ["revenue_pct", "per_active_logo_monthly"], "properties": { "revenue_pct": { "$ref": "#/$defs/assumption" }, "per_active_logo_monthly": { "$ref": "#/$defs/assumption" } }, "additionalProperties": false },
+    "revenue": { "type": "object", "required": ["starting_logos", "new_logos_monthly", "new_logo_growth_monthly_pct", "monthly_logo_churn_pct", "acv", "annual_expansion_pct", "billing_terms_months"], "properties": { "starting_logos": { "$ref": "#/$defs/assumption" }, "new_logos_monthly": { "$ref": "#/$defs/assumption" }, "new_logo_growth_monthly_pct": { "$ref": "#/$defs/assumption" }, "monthly_logo_churn_pct": { "$ref": "#/$defs/assumption" }, "acv": { "$ref": "#/$defs/assumption" }, "annual_expansion_pct": { "$ref": "#/$defs/assumption" }, "billing_terms_months": { "$ref": "#/$defs/assumption" }, "start_month": { "$ref": "#/$defs/assumption" }, "intro_discount_pct": { "$ref": "#/$defs/assumption" }, "intro_discount_months": { "$ref": "#/$defs/assumption" } }, "additionalProperties": false },
+    "financingItem": { "type": "object", "required": ["instrument", "month", "amount"], "properties": { "instrument": { "$ref": "#/$defs/assumption" }, "month": { "$ref": "#/$defs/assumption" }, "amount": { "$ref": "#/$defs/assumption" } }, "additionalProperties": false },
+    "financing": { "type": "object", "required": ["events"], "properties": { "events": { "type": "array", "items": { "$ref": "#/$defs/financingItem" } } }, "additionalProperties": false }
+  }
+}
