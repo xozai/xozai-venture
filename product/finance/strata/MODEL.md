@@ -55,9 +55,7 @@ but unquantified until the engine grows a billing-terms cash line (ask for Codex
    stays 79–91% across scenarios, so this only matters if real usage is ≥ 3× the assumption.
    Churn (0.6%/mo) barely moves 3-year cash but dominates LTV.
 
-**Assumptions to validate** (source = "assumption", confidence L): state of incorporation
-for the PBC (Delaware assumed, foreign-qualified in Texas at $750; a Texas PBC would drop that
-fee to a $300 filing); TML exhibitor fee
+**Assumptions to validate** (source = "assumption", confidence L): TML exhibitor fee
 ($3k assumed — TML has not quoted); insurance package ($3.6k/yr); pilot-agreement counsel
 ($2.5k); public-sector logo retention (90–95%/yr, vendor-reported); per-city COGS; contractor
 and FTE rates. Researcher's `research/FINANCIAL_BENCHMARKS.md` and HermesX/Scribe's
@@ -67,7 +65,7 @@ and FTE rates. Researcher's `research/FINANCIAL_BENCHMARKS.md` and HermesX/Scrib
 values, never edited in place:
 1. Opening cash: under $10,000 → modeled at $10,000.
 2. Xozai defaults kept: 3-year horizon, founder pay deferred, bootstrapped.
-3. Entity: Public Benefit Corporation (taxed as a C-Corp; Delaware assumed, same franchise tax).
+3. Entity: Delaware Public Benefit Corporation (confirmed 15:28), foreign-qualified in Texas; taxed as a C-Corp.
 4. Schertz has not committed to paying → starting paying cities = 0 (unchanged).
 5. No cash floor.
 

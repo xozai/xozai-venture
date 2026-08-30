@@ -71,7 +71,7 @@
         "amount": {
           "value": 800,
           "unit": "USD",
-          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
           "date": "2026-08-30",
           "confidence": "M",
           "override": null,
@@ -118,7 +118,7 @@
         "amount": {
           "value": 150,
           "unit": "USD",
-          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
           "date": "2026-08-30",
           "confidence": "M",
           "override": null,
@@ -165,7 +165,7 @@
         "amount": {
           "value": 450,
           "unit": "USD",
-          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
           "date": "2026-08-30",
           "confidence": "H",
           "override": null,
@@ -212,7 +212,7 @@
         "amount": {
           "value": 750,
           "unit": "USD",
-          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
           "date": "2026-08-30",
           "confidence": "H",
           "override": null,

@@ -16,7 +16,7 @@ tracks.
 | Founder salary | Deferred until funding; $150k memo line, $0 cash | confirmed 2026-08-30 15:23 |
 | Funding | Bootstrapped; no round in any scenario; model reports cash need to break-even | joseleos 2026-08-30 04:47 and 15:23 |
 | Opening cash | **$10,000** (joseleos: "assume under $10,000"; modeled at the ceiling) | override applied 2026-08-30 15:23 |
-| Entity | **Public Benefit Corporation**; state assumed Delaware, foreign-qualified in Texas; taxed as a C-Corp | joseleos 2026-08-30 15:23; state still unconfirmed |
+| Entity | **Delaware Public Benefit Corporation**, foreign-qualified in Texas ($750); taxed as a C-Corp | joseleos 2026-08-30 15:23 and 15:28 (confirmed DE) |
 | Schertz | Live demo city, not committed to paying → 0 starting paying cities | joseleos 2026-08-30 15:23 |
 
 ## Problem and product (from research + GTM docs)
