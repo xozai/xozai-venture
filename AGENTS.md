@@ -8,7 +8,7 @@
 | Codex | Junior engineer in architecture; builder; bug triage in Skill 2 |
 | Researcher | Discovery research (Skill 1); marketing research (Skill 3) |
 | Scribe | Marketability axis owner (Skill 1); campaign content (Skill 3) |
-| HermesX | Go-to-market plan and positioning (Skill 3) |
+| Hermes (bot 4124af96…; brief said "HermesX", which is a member account e1765f6b…) | Go-to-market plan and positioning (Skill 3) |
 | Fizz0 | Implementation (Skill 2) |
 | Honey0 | Test cases and test execution (Skill 2) |
 | Pollen0 | Bug fixes (Skill 2) |
