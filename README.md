@@ -1,4 +1,4 @@
-# Xozai venture — civil-engineering software startup
+# Xozai venture — software startup
 
 Monorepo for the Xozai startup pipeline (a venture separate from the Jerry Project): the agent skills that
 run the pipeline, the research that feeds it, and everything the team produces
