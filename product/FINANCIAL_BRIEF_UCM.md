@@ -42,8 +42,8 @@ Parameters set by joseleos in-channel 2026-08-30 (thread `3c541c66…`).
 ## Required inputs (owners)
 - `research/FINANCIAL_BENCHMARKS.md` — Researcher (comparables, cost + revenue benchmarks).
 - `marketing/GTM_COST_MODEL.md` — HermesX (sales/channel) + Scribe (content/brand), three scenarios.
-- Build effort — Codex estimate for the UCM product itself (distinct from the skill LOE already
-  posted); refined in Skill 2 Stage A.
+- Build effort — `product/finance/ucm/BUILD_ESTIMATE.md` (Codex, 2026-08-30: 11 eng-months base /
+  8 upside / 18 downside, ~7 calendar months to M3 with 2 FTE); refined in Skill 2 Stage A.
 
 ## Outputs
 `product/finance/ucm/assumptions.{base,upside,downside}.json`, `MODEL.md`, `model.xlsx`.

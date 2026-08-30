@@ -30,7 +30,7 @@ Skill 3 (real CAC replaces benchmark CAC).
 | Input | Owner | Artifact | Status 2026-08-30 |
 |---|---|---|---|
 | Market size, comparables (stage, headcount, pricing, ARR/funding), cost + revenue benchmarks | Researcher | `research/FINANCIAL_BENCHMARKS.md` | requested in thread `3c541c66…` |
-| Build effort (eng-days, team shape, infra) | Codex | thread reply 2026-08-30 06:06 (18–29 eng-days MVP for the *skill*; per-venture build effort comes from Skill 2 Stage A) | received |
+| Build effort (eng-days, team shape, infra) | Codex | thread reply 2026-08-30 06:06 (18–29 eng-days MVP for the *skill*; per-venture build effort comes from Skill 2 Stage A) | received; UCM product estimate in `product/finance/ucm/BUILD_ESTIMATE.md` |
 | GTM plan cost (channels, sales headcount ramp, OTE, tooling, events, pilots) | HermesX | `marketing/GTM_COST_MODEL.md` | requested |
 | Content/brand cost (site, SEO, paid, design, PR, collateral) | Scribe | `marketing/GTM_COST_MODEL.md` (same file, Scribe section) | requested |
 | Venture brief, horizon, funding plan, pricing intent, scenario definitions | joseleos | `product/FINANCIAL_BRIEF_UCM.md` | answered 2026-08-30; brief drafted |
