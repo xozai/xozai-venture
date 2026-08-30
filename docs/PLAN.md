@@ -12,8 +12,8 @@ to actually follow and lets a phase be re-run without re-running the others
 ```
  Skill 1                     Skill 2                        Skill 3
  venture-discovery  ──►  product-build  ──►  go-to-market
- Researcher, Scribe,     Claude, Codex, Fizz0,             HermesX, Researcher,
- HermesX (ranking)       Honey0, Pollen0                   Scribe
+ Researcher, Scribe,     Claude, Codex, Fizz0,             Hermes, Researcher,
+ Hermes (ranking)       Honey0, Pollen0                   Scribe
  GATE: joseleos picks    GATE: release candidate           GATE: joseleos approves
  the product             passes Honey0's suite             GTM plan, then content
 ```
@@ -72,7 +72,7 @@ Goal: a GTM plan and a ready-to-run campaign for the shipped product.
 
 Gate (Scribe's rule): no content drafting until three inputs exist — named
 audience (discipline + role + firm size), the named incumbent/workaround being
-replaced, and the verbatim quotes. Sequence: HermesX's GTM plan and positioning
+replaced, and the verbatim quotes. Sequence: Hermes's GTM plan and positioning
 are signed off by joseleos **first**; Scribe's campaign assets **second**.
 
 Civil-specific channel hard-coded into the skill: **PDH-credit webinars** — PEs

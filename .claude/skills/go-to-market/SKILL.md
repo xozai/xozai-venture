@@ -1,7 +1,7 @@
 ---
 name: go-to-market
 description: >
-  Take the shipped product to market. HermesX owns the GTM plan and positioning,
+  Take the shipped product to market. Hermes owns the GTM plan and positioning,
   Researcher supplies marketing research, Scribe produces campaign content.
   Gated: no copy until audience, replaced incumbent, and verbatim quotes exist.
 version: 1
@@ -16,8 +16,8 @@ the fix loop; content production waits for real screenshots.
 ## Roles
 | Who | Does |
 |---|---|
-| HermesX | GTM plan, positioning, pricing recommendation, channel sequencing |
-| Researcher | Any research HermesX requests: audience sizing, incumbent pricing, venue lists, quote collection |
+| Hermes | GTM plan, positioning, pricing recommendation, channel sequencing |
+| Researcher | Any research Hermes requests: audience sizing, incumbent pricing, venue lists, quote collection |
 | Scribe | All campaign content: site copy, emails, webinar outline, social, one-pager |
 | Claude | Orchestrator; builds `website/` from Scribe's copy with Codex/Fizz0 if needed |
 | joseleos | Signs off the GTM plan, then the content |
@@ -28,13 +28,13 @@ the fix loop; content production waits for real screenshots.
 2. **The named incumbent or workaround being replaced** (e.g. "the OPCC Excel
    workbook you re-key from Civil 3D every milestone").
 3. **Verbatim pain quotes** with sources, from `research/`.
-Copy written without these is filler. HermesX confirms the gate is met in the
+Copy written without these is filler. Hermes confirms the gate is met in the
 channel before Scribe starts.
 
 ## Sequence (order is mandatory — reversed, everything gets rewritten)
-1. **Research brief** — HermesX lists questions; Researcher answers in
+1. **Research brief** — Hermes lists questions; Researcher answers in
    `marketing/RESEARCH_<topic>.md` with URLs.
-2. **GTM plan** — HermesX writes `marketing/GTM_PLAN.md`: audience, positioning
+2. **GTM plan** — Hermes writes `marketing/GTM_PLAN.md`: audience, positioning
    statement, wedge narrative (one sentence, names no unwinnable competitor),
    pricing, channel plan with sequencing and budget, 90-day targets, metrics.
    joseleos signs off. Record in `docs/DECISIONS.md`.
