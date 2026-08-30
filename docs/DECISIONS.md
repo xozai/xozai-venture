@@ -8,3 +8,4 @@
 | 2026-08-30 | Xozai discovery excludes Jerry Project's candidates (OPCC exhibits, MUTCD traffic control plans) | joseleos | Encoded in venture-discovery SKILL.md |
 | 2026-08-30 | Second discovery track: enterprise SPM, AI-forward (joseleos `/venture-build`). Skills parameterized by `research/spaces/<SPACE>.md`; civil track continues to ranking in parallel | joseleos / Claude | Civil scan merged (PR #2) |
 | 2026-08-30 | Marketability re-anchored per space (SPM addendum, PR #3); cross-track comparison is prose only, never a numeric ranking | Scribe / Claude | Encoded in venture-discovery SKILL.md step 7 |
+| 2026-08-30 | Skills made space-agnostic: no civil/OPCC/PDH/PE references in any `SKILL.md`; all space-specific scope, exclusions, liability analog, venues, and channels live in `research/spaces/<SPACE>.md` (v2 of all three skills) | joseleos / Claude | Civil content preserved in `CIVIL_ENGINEERING.md` |
