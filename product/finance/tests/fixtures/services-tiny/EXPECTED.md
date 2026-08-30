@@ -3,6 +3,10 @@
 Verified by running `product/finance/engine/calculate.ts` directly against
 `assumptions.base.json` on 2026-08-30 (this fixture is a single scenario; see TC-04 point 4 for
 why that's a valid, separately-tested case).
+Re-verified 2026-08-30 against the committed engine on main (PR #16, commit `c131489`) via
+`product/finance/engine/test/fixtures.test.ts`: every figure below is unchanged by the
+cohort-based churn rewrite (this fixture has zero `new_logos_monthly`, so cohort tracking is a
+no-op here regardless).
 
 ## Why this fixture is modeled the way it is
 The engine's revenue module has exactly one shape: `activeLogos × acv`, with logo count driven
