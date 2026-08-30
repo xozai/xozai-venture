@@ -1,6 +1,6 @@
 # Plan — Skill 4: `financial-model`
 
-Owner: joseleos. Orchestrator: Claude. Created 2026-08-30. Status: **plan + skill scaffold; inputs in flight.**
+Owner: joseleos. Orchestrator: Claude. Created 2026-08-30. Status: **v1 model delivered for UCM (PR #17, 2026-08-30); G1–G3 passed, G4 awaiting joseleos.**
 
 ## Goal
 
@@ -102,11 +102,10 @@ shorter with Codex/Fizz0 in parallel on 2 and 6. A prompt-only prototype
 
 ## Gates
 
-- **G1** (this PR): plan + skill scaffold reviewed by joseleos.
-- **G2**: benchmark + GTM cost PRs merged; schema frozen.
-- **G3**: engine passes Honey0's fixtures; cash reconciles every period.
-- **G4**: first venture model reviewed by joseleos; then the skill is
-  "done" and re-runnable per venture.
+- **G1** ✅ 2026-08-30: plan + skill scaffold merged (#7).
+- **G2** ✅ 2026-08-30: benchmarks (#11, #13) + GTM cost (#12, #15) merged; schema 1.0.0 + optional 1.1 fields (#16).
+- **G3** ✅ 2026-08-30: engine (#16) passes its suite and Honey0's fixtures by hand-run (#8); CI wiring of fixtures pending Honey0's follow-up.
+- **G4** ⏳: UCM model v1 (#17) awaiting joseleos review and the bootstrapped-vs-raise decision.
 
 ## Answers from joseleos (2026-08-30)
 
