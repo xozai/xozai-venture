@@ -2,7 +2,7 @@
 name: venture-discovery
 description: >
   Find and rank civil-engineering problems that software automation could solve.
-  Orchestrates Researcher (evidence), Scribe (marketability axis), HermesX
+  Orchestrates Researcher (evidence), Scribe (marketability axis), Hermes
   (ranking) and produces a decision memo for joseleos to pick a product.
 version: 1
 ---
