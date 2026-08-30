@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0.0",
+  "meta": {
+    "venture": {
+      "value": "fixture-services-tiny",
+      "unit": "text",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "scenario": {
+      "value": "base",
+      "unit": "text",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "currency": {
+      "value": "USD",
+      "unit": "iso-4217",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "start_month": {
+      "value": "2026-09",
+      "unit": "YYYY-MM",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "horizon_months": {
+      "value": 36,
+      "unit": "months",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "opening_cash": {
+      "value": 10000,
+      "unit": "USD",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "formation_legal": {
+    "items": [
+      {
+        "name": {
+          "value": "DE C-Corp formation + registered agent",
+          "unit": "text",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2500,
+          "unit": "USD",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "ga_ops": {
+    "items": [
+      {
+        "name": {
+          "value": "Software + banking + insurance bundle",
+          "unit": "text",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1200,
+          "unit": "USD",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "personnel": {
+    "roster": [
+      {
+        "role": {
+          "value": "Founder-consultant (deferred comp)",
+          "unit": "text",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 120000,
+          "unit": "USD/year",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "employer_tax_pct": {
+          "value": 0,
+          "unit": "decimal",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "benefits_pct": {
+          "value": 0,
+          "unit": "decimal",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "equipment": {
+          "value": 0,
+          "unit": "USD/FTE",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "founder": {
+          "value": true,
+          "unit": "boolean",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": true,
+          "unit": "boolean",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "rnd": {
+    "items": [
+      {
+        "name": {
+          "value": "Dev/PM tooling",
+          "unit": "text",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 100,
+          "unit": "USD",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "sales_marketing": {
+    "items": [
+      {
+        "name": {
+          "value": "Referral/content, no paid ads",
+          "unit": "text",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "USD",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 0,
+          "unit": "month",
+          "source": "fixture",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "cogs": {
+    "revenue_pct": {
+      "value": 0,
+      "unit": "decimal",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "per_active_logo_monthly": {
+      "value": 0,
+      "unit": "USD/logo/month",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "revenue": {
+    "starting_logos": {
+      "value": 1,
+      "unit": "logos",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "new_logos_monthly": {
+      "value": 0,
+      "unit": "logos/month",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "new_logo_growth_monthly_pct": {
+      "value": 0,
+      "unit": "decimal",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "monthly_logo_churn_pct": {
+      "value": 0,
+      "unit": "decimal",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "acv": {
+      "value": 144000,
+      "unit": "USD/logo/year",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "annual_expansion_pct": {
+      "value": 0,
+      "unit": "decimal",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "billing_terms_months": {
+      "value": 1,
+      "unit": "months",
+      "source": "fixture",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "financing": {
+    "events": []
+  }
+}
