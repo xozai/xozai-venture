@@ -86,6 +86,17 @@ Eng-Tips, tutorial SEO) is the worked example in
 Exit: joseleos approves the campaign; assets live in `marketing/`, site in
 `website/`.
 
+## Skill 4 — `financial-model`
+
+Goal: a sourced, scenario-based 3–5 year financial model for a venture as a
+US C-Corp — revenue, personnel, COGS, OpEx by function, cash, runway, capital
+need. Runs after discovery has a lead, and re-runs after Skills 2 and 3
+replace estimates with actuals. Researcher supplies benchmarks/comparables,
+Codex build effort, HermesX + Scribe GTM cost; Claude assembles assumptions
+and runs a deterministic engine. Full plan: `docs/FINANCIAL_MODEL_PLAN.md`.
+
+Exit: joseleos accepts `product/finance/<VENTURE>/MODEL.md`.
+
 ## Repo
 
 `xozai/xozai-venture` (this repo) holds skills, research, product, website, marketing.
