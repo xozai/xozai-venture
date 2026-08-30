@@ -92,8 +92,8 @@ upside_sm = [
   cost("A11 Paid search — bounded 3-month falsification test (kill: <3 qualified trials)", 500, "monthly", 12, 14, GTMA + " rev #15 (Researcher population bound 2026-08-30)", "M"),
   cost("A12 Launch collateral + brand refresh", 6000, "one_time", 9, 9, GTMA, "L"),
   cost("B1 CRM + outbound tooling", 99, "monthly", 12, 0, GTMB, "L"),
-  cost("B2 UESI/APWA exhibit booth + travel (m14)", 8000, "one_time", 14, 14, GTMB + " — quote required", "L"),
-  cost("B2 UESI/APWA exhibit booth + travel (m26)", 8000, "one_time", 26, 26, GTMB + " — quote required", "L"),
+  cost("B2 UESI Pipelines 10x10 booth + travel (m14)", 6500, "one_time", 14, 14, GTMB + " rev #21 — booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel", "M"),
+  cost("B2 UESI Pipelines 10x10 booth + travel (m26)", 6500, "one_time", 26, 26, GTMB + " rev #21 — booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel", "M"),
   cost("B4 State DOT training sponsorship", 3000, "one_time", 18, 18, GTMB + " — purchasability unconfirmed", "L")]
 # Downside per §A.3: only A1 + A4 survive; §B $0.
 scenarios = {

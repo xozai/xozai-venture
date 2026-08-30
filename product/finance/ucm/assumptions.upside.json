@@ -1762,27 +1762,27 @@
       },
       {
         "name": {
-          "value": "B2 UESI/APWA exhibit booth + travel (m14)",
+          "value": "B2 UESI Pipelines 10x10 booth + travel (m14)",
           "unit": "text",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "amount": {
-          "value": 8000,
+          "value": 6500,
           "unit": "USD",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "benchmark"
         },
         "cadence": {
           "value": "one_time",
           "unit": "cadence",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
           "confidence": "H",
           "override": null,
@@ -1791,45 +1791,45 @@
         "start_month": {
           "value": 14,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "end_month": {
           "value": 14,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         }
       },
       {
         "name": {
-          "value": "B2 UESI/APWA exhibit booth + travel (m26)",
+          "value": "B2 UESI Pipelines 10x10 booth + travel (m26)",
           "unit": "text",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "amount": {
-          "value": 8000,
+          "value": 6500,
           "unit": "USD",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "benchmark"
         },
         "cadence": {
           "value": "one_time",
           "unit": "cadence",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
           "confidence": "H",
           "override": null,
@@ -1838,18 +1838,18 @@
         "start_month": {
           "value": 26,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         },
         "end_month": {
           "value": 26,
           "unit": "month",
-          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) \u2014 quote required",
+          "source": "marketing/GTM_COST_MODEL.md \u00a7B (Scribe straw man; HermesX sign-off pending) rev #21 \u2014 booth $4,995 published (pipelinesconference.org/exhibitors, 2026-08-30) + ~$1,500 travel",
           "date": "2026-08-30",
-          "confidence": "L",
+          "confidence": "M",
           "override": null,
           "kind": "input"
         }

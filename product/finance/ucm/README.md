@@ -1,8 +1,9 @@
 # UCM financial model — inputs
 
 - `build_assumptions.py` regenerates `assumptions.{base,upside,downside}.json`. Edit the generator, not the JSON.
-- Sources bound: `research/FINANCIAL_BENCHMARKS.md` (#11, #13), `marketing/GTM_COST_MODEL.md` (#12; §B is a
-  Scribe straw man until HermesX signs off), `BUILD_ESTIMATE.md` (Codex), `docs/DECISIONS.md` defaults
+- Sources bound: `research/FINANCIAL_BENCHMARKS.md` (#11, #13), `marketing/GTM_COST_MODEL.md` (#12, #15, #21;
+  §B priced from published UESI sources — exhibit-at-all and B4 purchasability still await HermesX,
+  neither touches the base case), `BUILD_ESTIMATE.md` (Codex), `docs/DECISIONS.md` defaults
   (3-year, founder comp deferred, bootstrapped, opening cash $50k = **assumption L, joseleos to confirm**).
 - `revenue.start_month = 8` needs schema ≥ 1.1.0 (Codex engine PR). Until then the file fails
   `additionalProperties`; strip the key to run on 1.0.0 — but year-1 revenue will then be overstated.
