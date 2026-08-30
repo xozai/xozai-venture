@@ -22,11 +22,11 @@
       "opex": 9170,
       "operatingIncome": -8755.42,
       "financing": 0,
-      "cashBeginning": 25000,
+      "cashBeginning": 10000,
       "netCashFlow": -8755.42,
-      "cashEnding": 16244.58,
+      "cashEnding": 1244.58,
       "burn": 8755.42,
-      "runwayMonths": 1.86
+      "runwayMonths": 0.14
     },
     {
       "month": 2,
@@ -46,11 +46,11 @@
       "opex": 9870,
       "operatingIncome": -9007.56,
       "financing": 0,
-      "cashBeginning": 16244.58,
+      "cashBeginning": 1244.58,
       "netCashFlow": -9007.56,
-      "cashEnding": 7237.02,
+      "cashEnding": -7762.98,
       "burn": 9007.56,
-      "runwayMonths": 0.8
+      "runwayMonths": 0
     },
     {
       "month": 3,
@@ -70,11 +70,11 @@
       "opex": 1370,
       "operatingIncome": -23.86,
       "financing": 0,
-      "cashBeginning": 7237.02,
+      "cashBeginning": -7762.98,
       "netCashFlow": -23.86,
-      "cashEnding": 7213.16,
+      "cashEnding": -7786.84,
       "burn": 23.86,
-      "runwayMonths": 302.32
+      "runwayMonths": 0
     },
     {
       "month": 4,
@@ -94,9 +94,9 @@
       "opex": 1370,
       "operatingIncome": 498.46,
       "financing": 0,
-      "cashBeginning": 7213.16,
+      "cashBeginning": -7786.84,
       "netCashFlow": 498.46,
-      "cashEnding": 7711.62,
+      "cashEnding": -7288.38,
       "burn": 0,
       "runwayMonths": null
     },
@@ -118,9 +118,9 @@
       "opex": 1370,
       "operatingIncome": 1062.39,
       "financing": 0,
-      "cashBeginning": 7711.62,
+      "cashBeginning": -7288.38,
       "netCashFlow": 1062.39,
-      "cashEnding": 8774.01,
+      "cashEnding": -6225.99,
       "burn": 0,
       "runwayMonths": null
     },
@@ -142,11 +142,11 @@
       "opex": 3170,
       "operatingIncome": -128.86,
       "financing": 0,
-      "cashBeginning": 8774.01,
+      "cashBeginning": -6225.99,
       "netCashFlow": -128.86,
-      "cashEnding": 8645.15,
+      "cashEnding": -6354.85,
       "burn": 128.86,
-      "runwayMonths": 67.09
+      "runwayMonths": 0
     },
     {
       "month": 7,
@@ -166,11 +166,11 @@
       "opex": 7370,
       "operatingIncome": -3671.82,
       "financing": 0,
-      "cashBeginning": 8645.15,
+      "cashBeginning": -6354.85,
       "netCashFlow": -3671.82,
-      "cashEnding": 4973.32,
+      "cashEnding": -10026.68,
       "burn": 3671.82,
-      "runwayMonths": 1.35
+      "runwayMonths": 0
     },
     {
       "month": 8,
@@ -190,11 +190,11 @@
       "opex": 7370,
       "operatingIncome": -2962.76,
       "financing": 0,
-      "cashBeginning": 4973.32,
+      "cashBeginning": -10026.68,
       "netCashFlow": -2962.76,
-      "cashEnding": 2010.56,
+      "cashEnding": -12989.44,
       "burn": 2962.76,
-      "runwayMonths": 0.68
+      "runwayMonths": 0
     },
     {
       "month": 9,
@@ -214,9 +214,9 @@
       "opex": 7370,
       "operatingIncome": -2197.65,
       "financing": 0,
-      "cashBeginning": 2010.56,
+      "cashBeginning": -12989.44,
       "netCashFlow": -2197.65,
-      "cashEnding": -187.09,
+      "cashEnding": -15187.09,
       "burn": 2197.65,
       "runwayMonths": 0
     },
@@ -238,9 +238,9 @@
       "opex": 7370,
       "operatingIncome": -1372.17,
       "financing": 0,
-      "cashBeginning": -187.09,
+      "cashBeginning": -15187.09,
       "netCashFlow": -1372.17,
-      "cashEnding": -1559.26,
+      "cashEnding": -16559.26,
       "burn": 1372.17,
       "runwayMonths": 0
     },
@@ -262,9 +262,9 @@
       "opex": 7370,
       "operatingIncome": -481.63,
       "financing": 0,
-      "cashBeginning": -1559.26,
+      "cashBeginning": -16559.26,
       "netCashFlow": -481.63,
-      "cashEnding": -2040.89,
+      "cashEnding": -17040.89,
       "burn": 481.63,
       "runwayMonths": 0
     },
@@ -286,9 +286,9 @@
       "opex": 9370,
       "operatingIncome": -1521.02,
       "financing": 0,
-      "cashBeginning": -2040.89,
+      "cashBeginning": -17040.89,
       "netCashFlow": -1521.02,
-      "cashEnding": -3561.91,
+      "cashEnding": -18561.91,
       "burn": 1521.02,
       "runwayMonths": 0
     },
@@ -310,9 +310,9 @@
       "opex": 11370,
       "operatingIncome": -2484.92,
       "financing": 0,
-      "cashBeginning": -3561.91,
+      "cashBeginning": -18561.91,
       "netCashFlow": -2484.92,
-      "cashEnding": -6046.84,
+      "cashEnding": -21046.84,
       "burn": 2484.92,
       "runwayMonths": 0
     },
@@ -334,9 +334,9 @@
       "opex": 19620,
       "operatingIncome": -9617.49,
       "financing": 0,
-      "cashBeginning": -6046.84,
+      "cashBeginning": -21046.84,
       "netCashFlow": -9617.49,
-      "cashEnding": -15664.33,
+      "cashEnding": -30664.33,
       "burn": 9617.49,
       "runwayMonths": 0
     },
@@ -358,9 +358,9 @@
       "opex": 7620,
       "operatingIncome": 3587.55,
       "financing": 0,
-      "cashBeginning": -15664.33,
+      "cashBeginning": -30664.33,
       "netCashFlow": 3587.55,
-      "cashEnding": -12076.78,
+      "cashEnding": -27076.78,
       "burn": 0,
       "runwayMonths": null
     },
@@ -382,9 +382,9 @@
       "opex": 17288.33,
       "operatingIncome": -4781.36,
       "financing": 0,
-      "cashBeginning": -12076.78,
+      "cashBeginning": -27076.78,
       "netCashFlow": -4781.36,
-      "cashEnding": -16858.13,
+      "cashEnding": -31858.13,
       "burn": 4781.36,
       "runwayMonths": 0
     },
@@ -406,9 +406,9 @@
       "opex": 14788.33,
       "operatingIncome": -880.25,
       "financing": 0,
-      "cashBeginning": -16858.13,
+      "cashBeginning": -31858.13,
       "netCashFlow": -880.25,
-      "cashEnding": -17738.39,
+      "cashEnding": -32738.39,
       "burn": 880.25,
       "runwayMonths": 0
     },
@@ -430,9 +430,9 @@
       "opex": 15238.33,
       "operatingIncome": 180.39,
       "financing": 0,
-      "cashBeginning": -17738.39,
+      "cashBeginning": -32738.39,
       "netCashFlow": 180.39,
-      "cashEnding": -17558,
+      "cashEnding": -32558,
       "burn": 0,
       "runwayMonths": null
     },
@@ -454,9 +454,9 @@
       "opex": 14788.33,
       "operatingIncome": 2259.03,
       "financing": 0,
-      "cashBeginning": -17558,
+      "cashBeginning": -32558,
       "netCashFlow": 2259.03,
-      "cashEnding": -15298.97,
+      "cashEnding": -30298.97,
       "burn": 0,
       "runwayMonths": null
     },
@@ -478,9 +478,9 @@
       "opex": 14788.33,
       "operatingIncome": 4014.78,
       "financing": 0,
-      "cashBeginning": -15298.97,
+      "cashBeginning": -30298.97,
       "netCashFlow": 4014.78,
-      "cashEnding": -11284.19,
+      "cashEnding": -26284.19,
       "burn": 0,
       "runwayMonths": null
     },
@@ -502,9 +502,9 @@
       "opex": 14788.33,
       "operatingIncome": 5907.48,
       "financing": 0,
-      "cashBeginning": -11284.19,
+      "cashBeginning": -26284.19,
       "netCashFlow": 5907.48,
-      "cashEnding": -5376.71,
+      "cashEnding": -20376.71,
       "burn": 0,
       "runwayMonths": null
     },
@@ -526,9 +526,9 @@
       "opex": 14788.33,
       "operatingIncome": 7947.69,
       "financing": 0,
-      "cashBeginning": -5376.71,
+      "cashBeginning": -20376.71,
       "netCashFlow": 7947.69,
-      "cashEnding": 2570.98,
+      "cashEnding": -12429.02,
       "burn": 0,
       "runwayMonths": null
     },
@@ -550,9 +550,9 @@
       "opex": 14788.33,
       "operatingIncome": 10146.83,
       "financing": 0,
-      "cashBeginning": 2570.98,
+      "cashBeginning": -12429.02,
       "netCashFlow": 10146.83,
-      "cashEnding": 12717.81,
+      "cashEnding": -2282.19,
       "burn": 0,
       "runwayMonths": null
     },
@@ -574,9 +574,9 @@
       "opex": 16788.33,
       "operatingIncome": 10517.15,
       "financing": 0,
-      "cashBeginning": 12717.81,
+      "cashBeginning": -2282.19,
       "netCashFlow": 10517.15,
-      "cashEnding": 23234.96,
+      "cashEnding": 8234.96,
       "burn": 0,
       "runwayMonths": null
     }
@@ -599,7 +599,7 @@
       "operatingIncome": 15727.42,
       "financing": 0,
       "netCashFlow": 15727.42,
-      "cashEnding": 38962.37,
+      "cashEnding": 23962.37,
       "headcountEnding": 3,
       "activeLogosEnding": 35.92
     },
@@ -620,7 +620,7 @@
       "operatingIncome": 56415.99,
       "financing": 0,
       "netCashFlow": 56415.99,
-      "cashEnding": 95378.36,
+      "cashEnding": 80378.36,
       "headcountEnding": 3,
       "activeLogosEnding": 45.44
     },
@@ -641,7 +641,7 @@
       "operatingIncome": 93017.88,
       "financing": 0,
       "netCashFlow": 93017.88,
-      "cashEnding": 188396.23,
+      "cashEnding": 173396.23,
       "headcountEnding": 3,
       "activeLogosEnding": 57.09
     },
@@ -662,7 +662,7 @@
       "operatingIncome": 136249.25,
       "financing": 0,
       "netCashFlow": 136249.25,
-      "cashEnding": 324645.48,
+      "cashEnding": 309645.48,
       "headcountEnding": 3,
       "activeLogosEnding": 71.34
     }
@@ -685,7 +685,7 @@
       "operatingIncome": -28561.9,
       "financing": 0,
       "netCashFlow": -28561.9,
-      "cashEnding": -3561.91,
+      "cashEnding": -18561.91,
       "headcountEnding": 2,
       "activeLogosEnding": 8.78
     },
@@ -706,7 +706,7 @@
       "operatingIncome": 26796.88,
       "financing": 0,
       "netCashFlow": 26796.88,
-      "cashEnding": 23234.96,
+      "cashEnding": 8234.96,
       "headcountEnding": 2,
       "activeLogosEnding": 28.14
     },
@@ -727,7 +727,7 @@
       "operatingIncome": 301410.54,
       "financing": 0,
       "netCashFlow": 301410.54,
-      "cashEnding": 324645.48,
+      "cashEnding": 309645.48,
       "headcountEnding": 3,
       "activeLogosEnding": 71.34
     }
@@ -741,39 +741,39 @@
     "nrr_annual_pct": 1.03,
     "ltv": 209614.94,
     "ltv_cac": 353.92,
-    "cash_out_month": 9,
+    "cash_out_month": 2,
     "break_even_month": 4,
-    "capital_need_to_break_even": 17738.39,
-    "ending_cash": 324645.48
+    "capital_need_to_break_even": 32738.39,
+    "ending_cash": 309645.48
   },
   "sensitivities": [
     {
       "variable": "price",
       "change": "+10%",
       "revenue": 1014816.24,
-      "cashEnding": 414133.82,
-      "capitalNeed": 8950.39
+      "cashEnding": 399133.82,
+      "capitalNeed": 23950.39
     },
     {
       "variable": "win_rate",
       "change": "+10%",
       "revenue": 1014816.24,
-      "cashEnding": 409030.53,
-      "capitalNeed": 9377.76
+      "cashEnding": 394030.53,
+      "capitalNeed": 24377.76
     },
     {
       "variable": "churn",
       "change": "+10%",
       "revenue": 919328.29,
-      "cashEnding": 321687.44,
-      "capitalNeed": 17927.82
+      "cashEnding": 306687.44,
+      "capitalNeed": 32927.82
     },
     {
       "variable": "hiring_pace",
       "change": "+3 months",
       "revenue": 922560.21,
-      "cashEnding": 407682.98,
-      "capitalNeed": 0
+      "cashEnding": 392682.98,
+      "capitalNeed": 12664.33
     }
   ],
   "checks": [

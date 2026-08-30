@@ -12,11 +12,12 @@ tracks.
 ## Parameters
 | Parameter | Value | Status |
 |---|---|---|
-| Horizon | 3 years (m1–24 monthly, m25–36 quarterly), start **2026-10** (launch "in 6–8 weeks" from 2026-08-30) | carried over from `docs/FINANCIAL_MODEL_PLAN.md` answer #1 — **confirm** |
-| Founder salary | Deferred until funding; $150k memo line, $0 cash | carried over from answer #2 — **confirm** |
-| Funding | Bootstrapped; no round in any scenario; model reports cash need to break-even | joseleos 2026-08-30 04:47: "budget is minimal until revenue comes in or investment is gained" |
-| Opening cash | **$25,000 placeholder** | not stated — **override needed**; it sets the cash-out month directly |
-| Entity | Delaware C-Corp foreign-qualified in Texas | HermesX wiki note 2026-06-27 says "C Corp forming"; state of incorporation not stated — **confirm** |
+| Horizon | 3 years (m1–24 monthly, m25–36 quarterly), start **2026-10** (launch "in 6–8 weeks" from 2026-08-30) | confirmed by joseleos 2026-08-30 15:23 |
+| Founder salary | Deferred until funding; $150k memo line, $0 cash | confirmed 2026-08-30 15:23 |
+| Funding | Bootstrapped; no round in any scenario; model reports cash need to break-even | joseleos 2026-08-30 04:47 and 15:23 |
+| Opening cash | **$10,000** (joseleos: "assume under $10,000"; modeled at the ceiling) | override applied 2026-08-30 15:23 |
+| Entity | **Public Benefit Corporation**; state assumed Delaware, foreign-qualified in Texas; taxed as a C-Corp | joseleos 2026-08-30 15:23; state still unconfirmed |
+| Schertz | Live demo city, not committed to paying → 0 starting paying cities | joseleos 2026-08-30 15:23 |
 
 ## Problem and product (from research + GTM docs)
 - Elected officials and appointed boards prepare for votes by Ctrl+F-ing 200–400-page packets

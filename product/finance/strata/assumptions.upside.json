@@ -40,7 +40,7 @@
     "horizon_months": {
       "value": 36,
       "unit": "months",
-      "source": "docs/FINANCIAL_MODEL_PLAN.md answer #1 (3-year default) \u2014 carried over pending confirmation",
+      "source": "docs/FINANCIAL_MODEL_PLAN.md answer #1 (3-year default) \u2014 carried over pending confirmation | confirmed by joseleos 2026-08-30 15:23",
       "date": "2026-08-30",
       "confidence": "M",
       "override": null,
@@ -49,10 +49,10 @@
     "opening_cash": {
       "value": 25000,
       "unit": "USD",
-      "source": "assumption: company cash at launch not yet stated by joseleos \u2014 PLACEHOLDER, please override",
+      "source": "assumption: company cash at launch not yet stated by joseleos \u2014 PLACEHOLDER, please override | override: joseleos 2026-08-30 15:23 (event 7a9ad457) 'assume under $10,000' \u2192 modeled at the $10k ceiling",
       "date": "2026-08-30",
       "confidence": "L",
-      "override": null,
+      "override": 10000,
       "kind": "input"
     }
   },
@@ -62,10 +62,10 @@
         "name": {
           "value": "Delaware C-Corp formation (Clerky/Stripe Atlas incl. 83(b), IP assignment)",
           "unit": "text",
-          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent | override: joseleos 2026-08-30 15:23 \u2014 entity is a PBC (state assumed Delaware; taxed as a C-Corp, same franchise tax)",
           "date": "2026-08-30",
           "confidence": "M",
-          "override": null,
+          "override": "Delaware Public Benefit Corporation formation (incl. 83(b), IP assignment)",
           "kind": "input"
         },
         "amount": {
@@ -762,7 +762,7 @@
         "defer_until_funding": {
           "value": true,
           "unit": "bool",
-          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation",
+          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation | confirmed by joseleos 2026-08-30 15:23",
           "date": "2026-08-30",
           "confidence": "M",
           "override": null,
@@ -1643,7 +1643,7 @@
     "starting_logos": {
       "value": 0,
       "unit": "paying cities",
-      "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a71: Schertz is a live demo/pilot city, not disclosed as paying \u2014 counted as $0 ARR at start",
+      "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a71: Schertz is a live demo/pilot city, not disclosed as paying \u2014 counted as $0 ARR at start | confirmed by joseleos 2026-08-30 15:23: Schertz has not committed to paying",
       "date": "2026-08-30",
       "confidence": "M",
       "override": null,
