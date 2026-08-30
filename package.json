@@ -1,0 +1,11 @@
+{
+  "name": "xozai-financial-model",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test product/finance/engine/test/*.test.ts",
+    "model": "node product/finance/engine/cli.ts"
+  },
+  "dependencies": { "exceljs": "^4.4.0" },
+  "engines": { "node": ">=22.18" }
+}

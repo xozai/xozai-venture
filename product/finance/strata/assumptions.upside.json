@@ -1,0 +1,1710 @@
+{
+  "schema_version": "1.0.0",
+  "meta": {
+    "venture": {
+      "value": "strata",
+      "unit": "text",
+      "source": "product/FINANCIAL_BRIEF_STRATA.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "scenario": {
+      "value": "upside",
+      "unit": "text",
+      "source": "product/FINANCIAL_BRIEF_STRATA.md",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "currency": {
+      "value": "USD",
+      "unit": "iso-4217",
+      "source": "brief",
+      "date": "2026-08-30",
+      "confidence": "H",
+      "override": null,
+      "kind": "input"
+    },
+    "start_month": {
+      "value": "2026-10",
+      "unit": "YYYY-MM",
+      "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 launch in 6\u20138 weeks from 2026-08-30",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    },
+    "horizon_months": {
+      "value": 36,
+      "unit": "months",
+      "source": "docs/FINANCIAL_MODEL_PLAN.md answer #1 (3-year default) \u2014 carried over pending confirmation | confirmed by joseleos 2026-08-30 15:23",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    },
+    "opening_cash": {
+      "value": 25000,
+      "unit": "USD",
+      "source": "assumption: company cash at launch not yet stated by joseleos \u2014 PLACEHOLDER, please override | override: joseleos 2026-08-30 15:23 (event 7a9ad457) 'assume under $10,000' \u2192 modeled at the $10k ceiling",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": 10000,
+      "kind": "input"
+    }
+  },
+  "formation_legal": {
+    "items": [
+      {
+        "name": {
+          "value": "Delaware C-Corp formation (Clerky/Stripe Atlas incl. 83(b), IP assignment)",
+          "unit": "text",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent | override: joseleos 2026-08-30 15:23 \u2014 entity is a PBC (state assumed Delaware; taxed as a C-Corp, same franchise tax)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": "Delaware Public Benefit Corporation formation (incl. 83(b), IP assignment)",
+          "kind": "input"
+        },
+        "amount": {
+          "value": 800,
+          "unit": "USD",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "stripe.com/atlas ($500) / clerky.com (~$800 formation + post-incorporation); HermesX wiki note 2026-06-27 says C Corp already forming \u2014 may already be spent",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Delaware registered agent",
+          "unit": "text",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 150,
+          "unit": "USD",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "delawareregisteredagent.com / harvardbusiness services $50\u2013$300/yr range",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Delaware franchise tax + annual report (assumed-par-value minimum)",
+          "unit": "text",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 450,
+          "unit": "USD",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 6,
+          "unit": "month",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "corp.delaware.gov: $400 min tax (assumed par value method) + $50 report fee",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Texas foreign qualification (Form 301)",
+          "unit": "text",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 750,
+          "unit": "USD",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration | Delaware PBC confirmed by joseleos 2026-08-30 15:28 (event 66e12ec9)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "sos.state.tx.us fee schedule: $750 foreign for-profit corporation registration",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Municipal pilot agreement + MSA/DPA templates (counsel)",
+          "unit": "text",
+          "source": "assumption: GTM open question #3 says pilot agreement not yet drafted; municipal data terms + TX Public Information Act clauses",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2500,
+          "unit": "USD",
+          "source": "assumption: GTM open question #3 says pilot agreement not yet drafted; municipal data terms + TX Public Information Act clauses",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "assumption: GTM open question #3 says pilot agreement not yet drafted; municipal data terms + TX Public Information Act clauses",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: GTM open question #3 says pilot agreement not yet drafted; municipal data terms + TX Public Information Act clauses",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: GTM open question #3 says pilot agreement not yet drafted; municipal data terms + TX Public Information Act clauses",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Trademark filing (USPTO 1 class + counsel)",
+          "unit": "text",
+          "source": "uspto.gov: $350/class electronic filing fee (2025) + ~$1,000 counsel",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1350,
+          "unit": "USD",
+          "source": "uspto.gov: $350/class electronic filing fee (2025) + ~$1,000 counsel",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "uspto.gov: $350/class electronic filing fee (2025) + ~$1,000 counsel",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 6,
+          "unit": "month",
+          "source": "uspto.gov: $350/class electronic filing fee (2025) + ~$1,000 counsel",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 6,
+          "unit": "month",
+          "source": "uspto.gov: $350/class electronic filing fee (2025) + ~$1,000 counsel",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Financing counsel reserve",
+          "unit": "text",
+          "source": "Bootstrapped base case per joseleos (minimal budget until revenue or investment) \u2014 $0; add on override if a SAFE is raised",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 0,
+          "unit": "USD",
+          "source": "Bootstrapped base case per joseleos (minimal budget until revenue or investment) \u2014 $0; add on override if a SAFE is raised",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "Bootstrapped base case per joseleos (minimal budget until revenue or investment) \u2014 $0; add on override if a SAFE is raised",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "Bootstrapped base case per joseleos (minimal budget until revenue or investment) \u2014 $0; add on override if a SAFE is raised",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "Bootstrapped base case per joseleos (minimal budget until revenue or investment) \u2014 $0; add on override if a SAFE is raised",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "ga_ops": {
+    "items": [
+      {
+        "name": {
+          "value": "Bookkeeping + accounting (outsourced)",
+          "unit": "text",
+          "source": "assumption: Bench/Pilot starter tiers $300\u2013$700/mo; low end while transactions are few",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 300,
+          "unit": "USD",
+          "source": "assumption: Bench/Pilot starter tiers $300\u2013$700/mo; low end while transactions are few",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption: Bench/Pilot starter tiers $300\u2013$700/mo; low end while transactions are few",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: Bench/Pilot starter tiers $300\u2013$700/mo; low end while transactions are few",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: Bench/Pilot starter tiers $300\u2013$700/mo; low end while transactions are few",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Annual tax prep (federal 1120 + DE + TX franchise no-tax-due report)",
+          "unit": "text",
+          "source": "assumption: small C-Corp return $1.5\u20132.5k; TX franchise tax no-tax-due threshold $2.47M (comptroller.texas.gov)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 2000,
+          "unit": "USD",
+          "source": "assumption: small C-Corp return $1.5\u20132.5k; TX franchise tax no-tax-due threshold $2.47M (comptroller.texas.gov)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "assumption: small C-Corp return $1.5\u20132.5k; TX franchise tax no-tax-due threshold $2.47M (comptroller.texas.gov)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "assumption: small C-Corp return $1.5\u20132.5k; TX franchise tax no-tax-due threshold $2.47M (comptroller.texas.gov)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: small C-Corp return $1.5\u20132.5k; TX franchise tax no-tax-due threshold $2.47M (comptroller.texas.gov)",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Insurance: cyber liability $1M + tech E&O + GL",
+          "unit": "text",
+          "source": "assumption: early-stage SaaS packages (Vouch/Embroker) $2\u20135k/yr; TX cities commonly require a certificate of insurance before pilot data access",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 3600,
+          "unit": "USD",
+          "source": "assumption: early-stage SaaS packages (Vouch/Embroker) $2\u20135k/yr; TX cities commonly require a certificate of insurance before pilot data access",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "assumption: early-stage SaaS packages (Vouch/Embroker) $2\u20135k/yr; TX cities commonly require a certificate of insurance before pilot data access",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: early-stage SaaS packages (Vouch/Embroker) $2\u20135k/yr; TX cities commonly require a certificate of insurance before pilot data access",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: early-stage SaaS packages (Vouch/Embroker) $2\u20135k/yr; TX cities commonly require a certificate of insurance before pilot data access",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Software seats + domain + email + banking",
+          "unit": "text",
+          "source": "assumption: Google Workspace, 1Password, Mercury (free), domain \u2014 per active person",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 120,
+          "unit": "USD",
+          "source": "assumption: Google Workspace, 1Password, Mercury (free), domain \u2014 per active person",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption: Google Workspace, 1Password, Mercury (free), domain \u2014 per active person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: Google Workspace, 1Password, Mercury (free), domain \u2014 per active person",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: Google Workspace, 1Password, Mercury (free), domain \u2014 per active person",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Payroll provider (Gusto) \u2014 starts with first paid employee",
+          "unit": "text",
+          "source": "gusto.com Simple plan $40/mo + $6/person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 60,
+          "unit": "USD",
+          "source": "gusto.com Simple plan $40/mo + $6/person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "gusto.com Simple plan $40/mo + $6/person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 16,
+          "unit": "month",
+          "source": "gusto.com Simple plan $40/mo + $6/person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "gusto.com Simple plan $40/mo + $6/person",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Remote stipend / coworking",
+          "unit": "text",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; $0 until funded",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 0,
+          "unit": "USD",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; $0 until funded",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; $0 until funded",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; $0 until funded",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; $0 until funded",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "personnel": {
+    "roster": [
+      {
+        "role": {
+          "value": "Founder / CEO + product (joseleos)",
+          "unit": "text",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 150000,
+          "unit": "USD/yr",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.09,
+          "unit": "ratio",
+          "source": "FICA 7.65% (irs.gov Topic 751) + FUTA 0.6% + TX SUTA new-employer 2.7% on first $9k (twc.texas.gov) \u2248 9% blended",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0.12,
+          "unit": "ratio",
+          "source": "assumption: small-employer health + 401k match, no equity accounting",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 2500,
+          "unit": "USD one-time",
+          "source": "assumption: laptop + peripherals",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": true,
+          "unit": "bool",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef); base is memo-only (deferred) per FINANCIAL_MODEL_PLAN answer #2",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": true,
+          "unit": "bool",
+          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation | confirmed by joseleos 2026-08-30 15:23",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "role": {
+          "value": "Contract full-stack engineer, 0.5 FTE (1099; no payroll burden)",
+          "unit": "text",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 7,
+          "unit": "month",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 15,
+          "unit": "month",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 72000,
+          "unit": "USD/yr",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.0,
+          "unit": "ratio",
+          "source": "1099 contractor \u2014 no employer payroll tax",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "benefits_pct": {
+          "value": 0.0,
+          "unit": "ratio",
+          "source": "1099 contractor \u2014 no benefits",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "equipment": {
+          "value": 0,
+          "unit": "USD one-time",
+          "source": "contractor supplies own equipment",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "founder": {
+          "value": false,
+          "unit": "bool",
+          "source": "assumption: ~$12k/mo full-time-equivalent US contractor rate at half time; ends the month before the FTE hire",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": false,
+          "unit": "bool",
+          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "role": {
+          "value": "Full-stack engineer, FTE (hired once gross-margin cash covers \u2248$13.1k/mo loaded cost \u2248 18 paying Core cities)",
+          "unit": "text",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 16,
+          "unit": "month",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 130000,
+          "unit": "USD/yr",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.09,
+          "unit": "ratio",
+          "source": "FICA 7.65% (irs.gov Topic 751) + FUTA 0.6% + TX SUTA new-employer 2.7% on first $9k (twc.texas.gov) \u2248 9% blended",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0.12,
+          "unit": "ratio",
+          "source": "assumption: small-employer health + 401k match, no equity accounting",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 2500,
+          "unit": "USD one-time",
+          "source": "assumption: laptop + peripherals",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": false,
+          "unit": "bool",
+          "source": "assumption: Texas remote senior full-stack $120\u2013150k base (levels.fyi/BuiltIn Austin 2025 ranges); timing rule from FINANCIAL_BRIEF_STRATA.md",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": false,
+          "unit": "bool",
+          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "role": {
+          "value": "Customer success / onboarding + Texas field sales (ex-city staff)",
+          "unit": "text",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "headcount": {
+          "value": 1,
+          "unit": "FTE",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 25,
+          "unit": "month",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "annual_base": {
+          "value": 85000,
+          "unit": "USD/yr",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "employer_tax_pct": {
+          "value": 0.09,
+          "unit": "ratio",
+          "source": "FICA 7.65% (irs.gov Topic 751) + FUTA 0.6% + TX SUTA new-employer 2.7% on first $9k (twc.texas.gov) \u2248 9% blended",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "benefits_pct": {
+          "value": 0.12,
+          "unit": "ratio",
+          "source": "assumption: small-employer health + 401k match, no equity accounting",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "equipment": {
+          "value": 2500,
+          "unit": "USD one-time",
+          "source": "assumption: laptop + peripherals",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "founder": {
+          "value": false,
+          "unit": "bool",
+          "source": "assumption: TX municipal-experienced CS/AE base $75\u201395k; timing rule from brief",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "defer_until_funding": {
+          "value": false,
+          "unit": "bool",
+          "source": "docs/FINANCIAL_MODEL_PLAN.md answers 2026-08-30 (founder pay deferred until funding) \u2014 carried over to Strata pending confirmation",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "rnd": {
+    "items": [
+      {
+        "name": {
+          "value": "Hosting: app + Postgres + object storage + vector index + monitoring (fixed floor)",
+          "unit": "text",
+          "source": "assumption: Vercel/Railway + managed Postgres + S3-class storage; per-city variable cost is in COGS",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 250,
+          "unit": "USD",
+          "source": "assumption: Vercel/Railway + managed Postgres + S3-class storage; per-city variable cost is in COGS",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption: Vercel/Railway + managed Postgres + S3-class storage; per-city variable cost is in COGS",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: Vercel/Railway + managed Postgres + S3-class storage; per-city variable cost is in COGS",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: Vercel/Railway + managed Postgres + S3-class storage; per-city variable cost is in COGS",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Dev tooling (GitHub, CI, error tracking, LLM eval)",
+          "unit": "text",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 100,
+          "unit": "USD",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Security review + SOC2-lite readiness (pen test, policies) before Growth-tier cities",
+          "unit": "text",
+          "source": "assumption: 50K+ cities and TX DIR-style questionnaires expect a third-party review; single vendor pen test $4\u20138k",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 6000,
+          "unit": "USD",
+          "source": "assumption: 50K+ cities and TX DIR-style questionnaires expect a third-party review; single vendor pen test $4\u20138k",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "assumption: 50K+ cities and TX DIR-style questionnaires expect a third-party review; single vendor pen test $4\u20138k",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "assumption: 50K+ cities and TX DIR-style questionnaires expect a third-party review; single vendor pen test $4\u20138k",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "assumption: 50K+ cities and TX DIR-style questionnaires expect a third-party review; single vendor pen test $4\u20138k",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Contract design/UX (pilot onboarding flow, City Snapshot polish)",
+          "unit": "text",
+          "source": "assumption: product already live (stratacivicsolutions.com, Schertz demo); hardening not greenfield \u2014 see product/finance/strata/BUILD_ESTIMATE.md",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 4000,
+          "unit": "USD",
+          "source": "assumption: product already live (stratacivicsolutions.com, Schertz demo); hardening not greenfield \u2014 see product/finance/strata/BUILD_ESTIMATE.md",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "assumption: product already live (stratacivicsolutions.com, Schertz demo); hardening not greenfield \u2014 see product/finance/strata/BUILD_ESTIMATE.md",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "assumption: product already live (stratacivicsolutions.com, Schertz demo); hardening not greenfield \u2014 see product/finance/strata/BUILD_ESTIMATE.md",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "assumption: product already live (stratacivicsolutions.com, Schertz demo); hardening not greenfield \u2014 see product/finance/strata/BUILD_ESTIMATE.md",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "sales_marketing": {
+    "items": [
+      {
+        "name": {
+          "value": "TML Annual Conference exhibitor booth (Nov 11\u201313, San Antonio)",
+          "unit": "text",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) + ~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) (Week 1: register booth); fee not yet quoted by TML \u2014 GTM open question #1",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 3000,
+          "unit": "USD",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) + ~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) (Week 1: register booth); fee not yet quoted by TML \u2014 GTM open question #1",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) + ~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) (Week 1: register booth); fee not yet quoted by TML \u2014 GTM open question #1",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) + ~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) (Week 1: register booth); fee not yet quoted by TML \u2014 GTM open question #1",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) + ~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) (Week 1: register booth); fee not yet quoted by TML \u2014 GTM open question #1",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "TML booth travel, lodging, collateral, demo hardware",
+          "unit": "text",
+          "source": "assumption: 2 nights San Antonio + printed one-pagers + banner",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 1500,
+          "unit": "USD",
+          "source": "assumption: 2 nights San Antonio + printed one-pagers + banner",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "one_time",
+          "unit": "cadence",
+          "source": "assumption: 2 nights San Antonio + printed one-pagers + banner",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "assumption: 2 nights San Antonio + printed one-pagers + banner",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 2,
+          "unit": "month",
+          "source": "assumption: 2 nights San Antonio + printed one-pagers + banner",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "TML Region meetings / TCMA regionals (travel, per event)",
+          "unit": "text",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a75.3 event calendar (Sep 2 Region 8, Sep 9 Small City, Sep\u2013Oct TCMA) \u2014 ~1 event/mo year 1",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 300,
+          "unit": "USD",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a75.3 event calendar (Sep 2 Region 8, Sep 9 Small City, Sep\u2013Oct TCMA) \u2014 ~1 event/mo year 1",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a75.3 event calendar (Sep 2 Region 8, Sep 9 Small City, Sep\u2013Oct TCMA) \u2014 ~1 event/mo year 1",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a75.3 event calendar (Sep 2 Region 8, Sep 9 Small City, Sep\u2013Oct TCMA) \u2014 ~1 event/mo year 1",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a75.3 event calendar (Sep 2 Region 8, Sep 9 Small City, Sep\u2013Oct TCMA) \u2014 ~1 event/mo year 1",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Year-2/3 conferences (TML, TCMA, ELGL) incl. travel",
+          "unit": "text",
+          "source": "assumption: 4 events/yr at ~$4.5k all-in",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 6000.0,
+          "unit": "USD",
+          "source": "assumption: 4 events/yr at ~$4.5k all-in",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "annual",
+          "unit": "cadence",
+          "source": "assumption: 4 events/yr at ~$4.5k all-in",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 14,
+          "unit": "month",
+          "source": "assumption: 4 events/yr at ~$4.5k all-in",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: 4 events/yr at ~$4.5k all-in",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Website hosting, pilot signup form, CRM (HubSpot free \u2192 Starter)",
+          "unit": "text",
+          "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a79 open question #6 (pilot signup page needed) + HubSpot Starter ~$20\u201350/seat",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 100,
+          "unit": "USD",
+          "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a79 open question #6 (pilot signup page needed) + HubSpot Starter ~$20\u201350/seat",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a79 open question #6 (pilot signup page needed) + HubSpot Starter ~$20\u201350/seat",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a79 open question #6 (pilot signup page needed) + HubSpot Starter ~$20\u201350/seat",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a79 open question #6 (pilot signup page needed) + HubSpot Starter ~$20\u201350/seat",
+          "date": "2026-08-30",
+          "confidence": "M",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Content + LinkedIn (Scribe-drafted, organic, no paid media year 1)",
+          "unit": "text",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; organic only per GTM \u00a75",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 0,
+          "unit": "USD",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; organic only per GTM \u00a75",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; organic only per GTM \u00a75",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; organic only per GTM \u00a75",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "joseleos in Strata channel 2026-08-30 04:47 (event d9d225ef) \u2014 minimal budget; organic only per GTM \u00a75",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Paid LinkedIn / sponsored ELGL / GovTech placement (year 2+)",
+          "unit": "text",
+          "source": "assumption: light paid targeting once testimonials exist (GTM \u00a75 sequencing)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 750,
+          "unit": "USD",
+          "source": "assumption: light paid targeting once testimonials exist (GTM \u00a75 sequencing)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption: light paid targeting once testimonials exist (GTM \u00a75 sequencing)",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 13,
+          "unit": "month",
+          "source": "assumption: light paid targeting once testimonials exist (GTM \u00a75 sequencing)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 36,
+          "unit": "month",
+          "source": "assumption: light paid targeting once testimonials exist (GTM \u00a75 sequencing)",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      },
+      {
+        "name": {
+          "value": "Pilot onboarding cost (document ingestion labor/tooling per pilot city, ~1.5 pilots/mo year 1)",
+          "unit": "text",
+          "source": "assumption: GTM \u00a74.1 waives the $1,000 onboarding fee for pilots; ingestion is mostly automated",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "USD",
+          "source": "assumption: GTM \u00a74.1 waives the $1,000 onboarding fee for pilots; ingestion is mostly automated",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "benchmark"
+        },
+        "cadence": {
+          "value": "monthly",
+          "unit": "cadence",
+          "source": "assumption: GTM \u00a74.1 waives the $1,000 onboarding fee for pilots; ingestion is mostly automated",
+          "date": "2026-08-30",
+          "confidence": "H",
+          "override": null,
+          "kind": "input"
+        },
+        "start_month": {
+          "value": 1,
+          "unit": "month",
+          "source": "assumption: GTM \u00a74.1 waives the $1,000 onboarding fee for pilots; ingestion is mostly automated",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        },
+        "end_month": {
+          "value": 12,
+          "unit": "month",
+          "source": "assumption: GTM \u00a74.1 waives the $1,000 onboarding fee for pilots; ingestion is mostly automated",
+          "date": "2026-08-30",
+          "confidence": "L",
+          "override": null,
+          "kind": "input"
+        }
+      }
+    ]
+  },
+  "cogs": {
+    "revenue_pct": {
+      "value": 0.03,
+      "unit": "ratio",
+      "source": "assumption: support tooling + occasional card fees (most cities pay by ACH/check; TX municipalities are sales-tax exempt)",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "per_active_logo_monthly": {
+      "value": 60,
+      "unit": "USD/city/month",
+      "source": "assumption: LLM inference (Claude API) + retrieval + storage per city at realistic usage (hundreds to low thousands of cited queries/mo, not the 15K/mo Core cap) + re-ingestion of new packets; scenario-varied like Codex's UCM per-user API envelope (product/finance/ucm/BUILD_ESTIMATE.md)",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    }
+  },
+  "revenue": {
+    "starting_logos": {
+      "value": 0,
+      "unit": "paying cities",
+      "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a71: Schertz is a live demo/pilot city, not disclosed as paying \u2014 counted as $0 ARR at start | confirmed by joseleos 2026-08-30 15:23: Schertz has not committed to paying",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    },
+    "new_logos_monthly": {
+      "value": 0.5,
+      "unit": "paying cities/month (month-1 rate)",
+      "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a78: 15 demos \u2192 5 pilots \u2192 1 paid contract by day 90; base 0.35/mo \u2248 5\u20136 paid cities in year 1",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "derived"
+    },
+    "new_logo_growth_monthly_pct": {
+      "value": 0.07,
+      "unit": "ratio/month",
+      "source": "assumption: compounding from testimonials + TML pipeline; base 5%/mo \u21d2 \u224834 paying cities cumulative by month 36 (\u224815% of the ~230-city beachhead)",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "derived"
+    },
+    "monthly_logo_churn_pct": {
+      "value": 0.004,
+      "unit": "ratio/month",
+      "source": "assumption: public-sector SaaS gross logo retention typically 90\u201395%/yr (vendor-reported; no independent source yet) \u21d2 0.4\u20131.2%/mo",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "benchmark"
+    },
+    "acv": {
+      "value": 11000,
+      "unit": "USD/city/year",
+      "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a74 pricing table: Starter $3,600 / Core $9,600 / Growth $18,000; base = Core (beachhead tier), upside = Core-heavy mix with some Growth, downside = discounting to ~$600/mo",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    },
+    "annual_expansion_pct": {
+      "value": 0.08,
+      "unit": "ratio/year",
+      "source": "~/Documents/Strata_GTM_Strategy.docx (HermesX, 2026-08-29, draft pending sign-off) \u00a73.2: boards & commissions add-on and tier upgrades as cities grow",
+      "date": "2026-08-30",
+      "confidence": "L",
+      "override": null,
+      "kind": "derived"
+    },
+    "billing_terms_months": {
+      "value": 12,
+      "unit": "months billed upfront",
+      "source": "~/Documents/Strata_Market_Research.docx (Researcher, 2026-08-29) \u00a76: annual license; engine v1 recognizes ratably and does not yet model upfront cash (conservative)",
+      "date": "2026-08-30",
+      "confidence": "M",
+      "override": null,
+      "kind": "input"
+    }
+  },
+  "financing": {
+    "events": []
+  }
+}

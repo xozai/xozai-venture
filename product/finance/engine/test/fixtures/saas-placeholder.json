@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "meta": {
+    "venture": { "value": "Placeholder SaaS", "unit": "text", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "scenario": { "value": "base", "unit": "text", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "currency": { "value": "USD", "unit": "iso-4217", "source": "user brief", "date": "2026-08-30", "confidence": "H", "override": null, "kind": "input" },
+    "start_month": { "value": "2026-09", "unit": "YYYY-MM", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "horizon_months": { "value": 36, "unit": "months", "source": "user brief", "date": "2026-08-30", "confidence": "H", "override": null, "kind": "input" },
+    "opening_cash": { "value": 100000, "unit": "USD", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" }
+  },
+  "formation_legal": { "items": [{
+    "name": { "value": "C-Corp formation", "unit": "text", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "amount": { "value": 2500, "unit": "USD", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "cadence": { "value": "one_time", "unit": "cadence", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "start_month": { "value": 1, "unit": "month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "end_month": { "value": 1, "unit": "month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" }
+  }] },
+  "ga_ops": { "items": [] },
+  "personnel": { "roster": [{
+    "role": { "value": "Founder", "unit": "text", "source": "user brief", "date": "2026-08-30", "confidence": "H", "override": null, "kind": "input" },
+    "headcount": { "value": 1, "unit": "FTE", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "start_month": { "value": 1, "unit": "month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "end_month": { "value": 36, "unit": "month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "annual_base": { "value": 120000, "unit": "USD/year", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "employer_tax_pct": { "value": 0.1, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "benefits_pct": { "value": 0.15, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "equipment": { "value": 2000, "unit": "USD/FTE", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "founder": { "value": true, "unit": "boolean", "source": "user brief", "date": "2026-08-30", "confidence": "H", "override": null, "kind": "input" },
+    "defer_until_funding": { "value": true, "unit": "boolean", "source": "user brief", "date": "2026-08-30", "confidence": "H", "override": null, "kind": "input" }
+  }] },
+  "rnd": { "items": [] },
+  "sales_marketing": { "items": [] },
+  "cogs": {
+    "revenue_pct": { "value": 0.1, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "per_active_logo_monthly": { "value": 25, "unit": "USD/logo/month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" }
+  },
+  "revenue": {
+    "starting_logos": { "value": 0, "unit": "logos", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "new_logos_monthly": { "value": 1, "unit": "logos/month", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "new_logo_growth_monthly_pct": { "value": 0.03, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "monthly_logo_churn_pct": { "value": 0.01, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "acv": { "value": 3600, "unit": "USD/logo/year", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" },
+    "annual_expansion_pct": { "value": 0.05, "unit": "decimal", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "benchmark" },
+    "billing_terms_months": { "value": 12, "unit": "months", "source": "assumption", "date": "2026-08-30", "confidence": "L", "override": null, "kind": "input" }
+  },
+  "financing": { "events": [] }
+}
