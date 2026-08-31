@@ -5,8 +5,10 @@ description: >
   personnel, COGS, OpEx by function, cash, burn/runway, capital need) for a
   venture in any space, as a US C-Corp. Researcher supplies benchmarks and
   comparables, Codex the build effort, HermesX and Scribe the GTM cost;
-  Claude assembles assumptions and runs the deterministic engine.
-version: 2
+  Claude assembles assumptions and runs the deterministic engine. Optional
+  v3 step: valuation triangulation (DCF + revenue-multiple + SaaS-health)
+  as a fast sanity check alongside the engine, not a replacement for it.
+version: 3
 ---
 
 # Skill 4 — Financial model
@@ -94,6 +96,35 @@ LLM API usage-driven, tooling, contractors) · sales_marketing (from GTM
 cost model) · cogs (per-customer hosting/inference/support/data) ·
 revenue (pipeline → logos → ACV, tiers, expansion, churn, billing terms) ·
 financing (instrument, month, amount).
+
+## Optional — Valuation triangulation (v3, supplementary)
+A fast, independent sanity check that can run alongside the engine (never
+instead of it) once a venture has ARR/MRR-scale traction — DCF intrinsic
+value, revenue-multiple/comps, and SaaS health metrics (LTV:CAC, CAC
+payback, burn multiple, Rule of 40) with a HEALTHY/WATCH/CRITICAL verdict
+against stage benchmarks. Vendored + adapted (MIT) from
+[davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude/blob/main/plugins/venture-capital-intelligence/skills/financial-model)
+— see `THIRD_PARTY_LICENSE` and `research/SKILL_SOURCES.md` for the
+vendoring decision record.
+
+1. Copy `scripts/valuation_triangulation/model_inputs.example.json` to
+   `product/finance/<VENTURE>/triangulation/model_inputs.json` and fill in
+   top-line numbers (MRR/ARR, growth, NRR, CAC, ARPU, churn, burn, cash,
+   comparables). These are simplified inputs, not the full schema — no
+   `source`/`confidence` tagging required here.
+2. Run:
+   ```
+   python3 .claude/skills/financial-model/scripts/valuation_triangulation/financial_calc.py <VENTURE>
+   python3 .claude/skills/financial-model/scripts/valuation_triangulation/report_formatter.py <VENTURE>
+   ```
+3. Treat the output (`product/finance/<VENTURE>/triangulation/model_output.json`)
+   as a second opinion: if it diverges sharply from `MODEL.md`, investigate
+   why (usually an assumption mismatch) before trusting either number more.
+   Never paste triangulation output into `MODEL.md` or the memo — it is not
+   sourced/dated/confidence-tagged like the engine's assumptions and is not
+   fit for that bar.
+4. This step is opt-in per venture; skip it entirely if the engine's model
+   already answers the question at hand.
 
 ## Exit
 joseleos accepts `MODEL.md` in-channel. Record the accepted scenario and
