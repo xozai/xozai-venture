@@ -57,3 +57,18 @@ Everything else here is reference/inspiration, not a dependency to vendor.
 No changes recommended to the skill files themselves — these are inputs to
 cite during Stage A architecture and GTM planning, not replacements for the
 playbook steps.
+
+## 4. `pitch-deck` (new skill, added 2026-08-31)
+
+joseleos asked for public repos with skills for startup financial modeling
+and institutional-investor pitch decks (full survey posted in-channel
+2026-08-30T23:50). Three were picked to act on:
+
+| Repo | Verdict | License |
+|---|---|---|
+| [dkorobtsov/pitch-deck](https://github.com/dkorobtsov/pitch-deck) | **Vendored as the new `pitch-deck` skill.** Narrative-first, 6 gated phases, 10 anti-BS rules, CoVe verification with 4 critic personas, 7-test audit battery. No prior pitch-deck skill existed in this repo — pure addition, no conflict. | MIT — copyright notice preserved in `.claude/skills/pitch-deck/THIRD_PARTY_LICENSE` |
+| [davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude/blob/main/plugins/venture-capital-intelligence/skills/financial-model/SKILL.md) (financial-model skill) | **Not vendored.** This repo's `financial-model` skill (Skill 4, v2) is already a mature, production system — deterministic engine, xlsx export, CI fixtures (Honey0), used for the live UCM and Strata models. Overwriting or forking it with this generic skill would break that pipeline for no proven gain. Reference only: its idea of running DCF + revenue-multiple + SaaS-metrics valuation in parallel and emitting a HEALTHY/WATCH/CRITICAL verdict is a plausible v3 addition (a "triangulation" step layered on the existing engine) — flagged to joseleos, not built without his sign-off. | MIT |
+| [w95/awesome-claude-corporate-skills](https://github.com/w95/awesome-claude-corporate-skills) | **Not vendored.** 42-skill IB/PE finance suite (DCF, LBO, 3-statement, comps, CIM/teaser builders). Same reasoning as above — this repo's model is deterministic-engine-first and schema-driven, not prose-driven like these skills; wholesale adoption would regress rigor. Reference only, e.g. its comps/LBO methodology notes if `financial-model` ever needs a standalone valuation mode independent of the 3-statement engine. | Unverified — repo aggregates skill content from multiple sources; check per-skill license before vendoring anything from it. |
+
+Full research writeup with all 9 candidates: posted in the Xozai channel,
+event `1864ff840bdaca1b51275a0e7028d4ccb60217502b3e523d72f14a7f40f234a3`.
