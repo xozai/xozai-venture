@@ -1,0 +1,22 @@
+{
+  "company": "Example Venture",
+  "stage": "seed",
+  "sector": "vertical SaaS",
+  "mrr": 42000,
+  "arr": 0,
+  "mrr_growth_rate": 0.12,
+  "nrr": 1.05,
+  "gross_margin": 0.72,
+  "cac": 3200,
+  "arpu_monthly": 350,
+  "monthly_churn": 0.02,
+  "monthly_burn": 65000,
+  "cash_on_hand": 900000,
+  "discount_rate": 0.20,
+  "terminal_growth_rate": 0.03,
+  "projection_years": 5,
+  "comparables": [
+    {"name": "Comparable A", "ev_revenue_multiple": 9.5},
+    {"name": "Comparable B", "ev_revenue_multiple": 12.0}
+  ]
+}
