@@ -5,7 +5,7 @@
   "verdict": "WATCH",
   "valuation_range": {
     "low": 6549960,
-    "high": 13099920
+    "high": 9824940
   },
   "dcf": {
     "dcf_value": 8752281.0,
@@ -36,12 +36,12 @@
     "stage": "seed",
     "multiples": {
       "low": 10,
-      "mid": 14,
-      "high": 20
+      "mid": 12,
+      "high": 15
     },
     "implied_value_low": 6549960,
-    "implied_value_mid": 9169944,
-    "implied_value_high": 13099920
+    "implied_value_mid": 7859952,
+    "implied_value_high": 9824940
   },
   "saas_metrics": {
     "ltv": 39906.0,

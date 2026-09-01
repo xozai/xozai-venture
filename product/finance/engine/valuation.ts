@@ -21,12 +21,20 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
   const dcfWarnings = terminalPct !== null && (terminalPct < 0.4 || terminalPct > 0.7)
     ? [`Terminal value is ${(terminalPct * 100).toFixed(1)}% of DCF; expected 40–70%.`] : [];
 
+  // Exit run-rate ARR as of the period ending `endMonth`: the quarter that ends there if one
+  // exists (months 25+), else the exposed monthly row (months 1-24). Used for both the headline
+  // `arr` and `previousArr` below so a year-over-year ARR delta compares like with like, instead
+  // of a forward-looking exit rate against a backward-looking trailing-twelve-months total.
+  const arrAtMonth = (endMonth: number): number => {
+    const quarter = model.quarterly.find(q => q.endMonth === endMonth);
+    if (quarter) return quarter.revenue / (quarter.endMonth - quarter.startMonth + 1) * 12;
+    const monthRow = model.monthly.find(m => m.month === endMonth);
+    return monthRow ? monthRow.revenue * 12 : 0;
+  };
   const finalAnnual = model.annual.at(-1);
   const finalQuarter = model.quarterly.at(-1);
-  const finalRunRatePeriod = finalQuarter ?? model.monthly.at(-1);
-  const periodMonths = finalQuarter ? finalQuarter.endMonth - finalQuarter.startMonth + 1 : 1;
-  const periodRevenue = finalRunRatePeriod?.revenue ?? 0;
-  const arr = periodRevenue / periodMonths * 12;
+  const finalMonth = finalQuarter ? finalQuarter.endMonth : model.monthly.at(-1)?.month;
+  const arr = finalMonth !== undefined ? arrAtMonth(finalMonth) : 0;
   const fiscalYearRevenue = finalAnnual?.revenue ?? Number(model.metrics.total_revenue ?? 0);
   const validComps = (config.comparables ?? []).filter(c => c.name && Number.isFinite(c.ev_revenue_multiple) && c.ev_revenue_multiple > 0);
   const fallback = STAGE_MULTIPLES[stage] ?? STAGE_MULTIPLES.seed;
@@ -38,7 +46,11 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
   const growth = previousAnnual && previousAnnual.revenue > 0 ? finalAnnual!.revenue / previousAnnual.revenue - 1 : null;
   const margin = finalAnnual && finalAnnual.revenue > 0 ? finalAnnual.operatingIncome / finalAnnual.revenue : null;
   const rule40 = growth !== null && margin !== null ? (growth + margin) * 100 : null;
-  const netNewArr = previousAnnual ? Math.max(0, arr - previousAnnual.revenue) : 0;
+  // Compare exit run-rate to exit run-rate a year earlier, not to the prior year's trailing
+  // total revenue (mixed units — that mismatch inflates netNewArr, and so understates burn
+  // multiple, for any venture growing meaningfully within its fiscal year).
+  const previousArr = previousAnnual ? arrAtMonth(previousAnnual.endMonth) : 0;
+  const netNewArr = previousAnnual ? Math.max(0, arr - previousArr) : 0;
   const netBurn = finalAnnual ? Math.max(0, -finalAnnual.operatingIncome) : 0;
   const burnMultiple = netNewArr > 0 ? netBurn / netNewArr : null;
   const finalMonthlyBurn = finalAnnual ? Math.max(0, -finalAnnual.operatingIncome / 12) : 0;
@@ -47,10 +59,15 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
   const payback = model.metrics.cac_payback_months;
   const nrr = model.metrics.nrr_annual_pct;
   const metrics = {
-    ltv_cac: { value: ltvCac, health: health(ltvCac, n => n > 3, n => n < 2) },
-    cac_payback_months: { value: payback, health: health(payback, n => n < 18, n => n > 24) },
-    nrr_pct: { value: nrr === null ? null : nrr * 100, health: health(nrr, n => n > 1.1, n => n < 1) },
-    rule_of_40: { value: rule40 === null ? null : money(rule40), health: health(rule40, n => n >= 40, n => n < 40) },
+    // SKILL.md benchmark table: LTV:CAC best-in-class >5x, good >3x, concerning <2x.
+    ltv_cac: { value: ltvCac, health: health(ltvCac, n => n > 5, n => n < 2) },
+    // SKILL.md benchmark table: CAC payback best-in-class <12mo, good <18mo, concerning >24mo.
+    cac_payback_months: { value: payback, health: health(payback, n => n < 12, n => n > 24) },
+    // SKILL.md benchmark table: NDR best-in-class >120%, good >110%, concerning <100%.
+    nrr_pct: { value: nrr === null ? null : nrr * 100, health: health(nrr, n => n > 1.2, n => n < 1) },
+    // SKILL.md: Rule of 40 good >=40, concerning <40 "and not accelerating" — without a growth-
+    // trend signal, treat a buffer below 40 as WATCH rather than jumping straight to CRITICAL.
+    rule_of_40: { value: rule40 === null ? null : money(rule40), health: health(rule40, n => n >= 40, n => n < 30) },
     burn_multiple: { value: burnMultiple === null ? null : money(burnMultiple), health: health(burnMultiple, n => n < 2, n => n > 2) },
     runway_months: { value: runway, health: health(runway, n => n >= 12, n => n < 6) },
   };

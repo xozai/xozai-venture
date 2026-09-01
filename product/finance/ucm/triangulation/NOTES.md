@@ -50,3 +50,19 @@ not from the upstream vendor) and a top-level `verdict` field to
 `concerning_metrics: ["nrr"]` — matches this file's hand-written verdict above
 exactly. Every other field in `model_output.json` is byte-identical to the
 first run; this was a pure addition, not a recompute.
+
+## 2026-09-01 update (Pollen0, spec-conformance pass)
+`financial_calc.py`'s seed-stage revenue multiple was 10×/14×/20× — inconsistent
+with SKILL.md's published "Seed 10–15×" band and the TS engine's own
+`STAGE_MULTIPLES` (`[10, 15]`). Corrected to 10×/12×/15× (mid = rounded-down
+average, matching the convention of the other stage bands in the same table).
+Re-ran the script against the unchanged inputs above:
+- **Valuation range narrows to $6.5M–$9.8M** (was $6.5M–$13.1M) — only the
+  revenue-multiple high end moves (20× → 15×); DCF ($8.8M) is untouched.
+- Health verdict unchanged: **WATCH**, still driven solely by NRR 93% →
+  CRITICAL. Burn multiple stays HEALTHY under the also-tightened burn-multiple
+  bands (doc's `<1x`/`<2x`/`>2x`, was `<1.5x`/`<2.5x`/`>2.5x`) — UCM is
+  cash-generating (burn multiple −6.06), nowhere near either cutoff.
+- NRR bands also tightened to the doc's best-in-class `>120%` (was `>110%`,
+  which collapsed best-in-class and good into one HEALTHY band per PR #30's
+  flag); does not change UCM's 93% CRITICAL classification.
