@@ -18,3 +18,14 @@ export interface OverrideProvenance { path: string; sourcedValue: unknown; overr
 export interface ModelOutput { schema_version: "1.0.0"; venture: string; scenario: string; ventureType: string; currency: string; monthly: Period[]; quarterly: AggregatePeriod[]; annual: AggregatePeriod[]; metrics: Record<string, number | null>; sensitivities: Sensitivity[]; overrides: OverrideProvenance[]; checks: string[]; disclaimer: string }
 export interface AggregatePeriod { label: string; startMonth: number; endMonth: number; revenue: number; cogs: number; grossProfit: number; personnel: number; deferredComp: number; formationLegal: number; gaOps: number; rnd: number; salesMarketing: number; opex: number; operatingIncome: number; financing: number; netCashFlow: number; cashEnding: number; headcountEnding: number; activeLogosEnding: number }
 export interface Sensitivity { variable: string; change: string; revenue: number; cashEnding: number; capitalNeed: number }
+export interface ValuationComparable { name: string; ev_revenue_multiple: number }
+export interface ValuationConfig { stage?: string; discount_rate?: number; terminal_growth_rate?: number; comparables?: ValuationComparable[] }
+export type HealthBand = "HEALTHY" | "WATCH" | "CRITICAL" | "N/A";
+export interface ValuationOutput {
+  schema_version: "1.0.0"; venture: string; scenario: string; stage: string; arr: number; fiscal_year_revenue: number;
+  valuation_range: { low: number; high: number };
+  dcf: { value: number; terminal_value: number; terminal_value_pct: number | null; projected_fcfs: number[]; discount_rate: number; terminal_growth_rate: number; warnings: string[] };
+  revenue_multiple: { source: "comparables" | "stage_default"; multiple_low: number; multiple_high: number; implied_value_low: number; implied_value_high: number; comparables: ValuationComparable[]; warnings: string[] };
+  saas_health: { verdict: Exclude<HealthBand, "N/A">; drivers: string[]; metrics: Record<string, { value: number | null; health: HealthBand }> };
+  disclaimer: string;
+}
