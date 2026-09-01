@@ -1,0 +1,70 @@
+{
+  "company": "UCM (Utility Conflict Matrix automation)",
+  "stage": "seed",
+  "arr": 654996,
+  "valuation_range": {
+    "low": 6549960,
+    "high": 13099920
+  },
+  "dcf": {
+    "dcf_value": 8752281.0,
+    "terminal_value": 6068285.0,
+    "sum_pv_fcfs": 2683996.0,
+    "revenues": [
+      1491806.0,
+      3111822.0,
+      5984194.0,
+      10679356.0,
+      17801470.0
+    ],
+    "fcfs": [
+      208853.0,
+      435655.0,
+      837787.0,
+      1495110.0,
+      2492206.0
+    ],
+    "assumptions": {
+      "discount_rate": 0.2,
+      "terminal_growth_rate": 0.03,
+      "gross_margin": 0.94
+    }
+  },
+  "revenue_multiple": {
+    "arr": 654996,
+    "stage": "seed",
+    "multiples": {
+      "low": 10,
+      "mid": 14,
+      "high": 20
+    },
+    "implied_value_low": 6549960,
+    "implied_value_mid": 9169944,
+    "implied_value_high": 13099920
+  },
+  "saas_metrics": {
+    "ltv": 39906.0,
+    "customer_lifetime_months": 94.3,
+    "ltv_cac_ratio": 382.6,
+    "cac_payback_months": 0.2,
+    "burn_multiple": -6.06,
+    "runway_months": "N/A",
+    "rule_of_40": 264.8,
+    "nrr_pct": 93.0,
+    "arr_growth_annual_pct": 127.8,
+    "health": {
+      "ltv_cac": "HEALTHY",
+      "payback": "HEALTHY",
+      "burn": "HEALTHY",
+      "nrr": "CRITICAL"
+    }
+  },
+  "benchmarks": {
+    "mrr_growth_mom_pct": "15-20%",
+    "burn_multiple": "< 2x",
+    "runway_months": "18+",
+    "ltv_cac": "> 3x",
+    "gross_margin": "> 60%"
+  },
+  "_note": "Supplementary triangulation only \u2014 not a substitute for product/finance/<venture>/model.xlsx and MODEL.md, which remain the accepted source of truth."
+}

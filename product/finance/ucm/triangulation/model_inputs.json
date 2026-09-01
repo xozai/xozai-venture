@@ -1,0 +1,19 @@
+{
+  "company": "UCM (Utility Conflict Matrix automation)",
+  "stage": "seed",
+  "sector": "vertical SaaS (civil engineering)",
+  "mrr": 54583,
+  "arr": 0,
+  "mrr_growth_rate": 0.071,
+  "nrr": 0.93,
+  "gross_margin": 0.94,
+  "cac": 104.3,
+  "arpu_monthly": 450,
+  "monthly_churn": 0.0106,
+  "monthly_burn": -23473,
+  "cash_on_hand": 132679,
+  "discount_rate": 0.20,
+  "terminal_growth_rate": 0.03,
+  "projection_years": 5,
+  "comparables": []
+}
