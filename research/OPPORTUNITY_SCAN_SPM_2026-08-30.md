@@ -2,7 +2,7 @@
 title: "Xozai opportunity scan — enterprise SPM (discovery pass 1)"
 author: Researcher
 created: 2026-08-30
-status: draft — Scribe to score marketability on `SPM_RUBRIC_ADDENDUM.md` anchors, Hermes to rank
+status: marketability scored 2026-09-01 (research/SPM_MARKETABILITY_SCORES.md); Hermes to rank
 ---
 
 # Enterprise SPM opportunity scan (discovery pass 1)
@@ -25,20 +25,20 @@ would have been. That changes the wedge shape: several of these candidates are
 spreadsheet you built yourself." Flagging because it affects wedge-narrative scoring
 directly (see `SPM_RUBRIC_ADDENDUM.md` dimension 6).
 
-## Scored candidates (Effort, Value: Researcher, 1–5, 5=easier/more value. Marketability: Scribe, TBD, SPM-anchored — not comparable to civil scores.)
+## Scored candidates (Effort, Value: Researcher, 1–5, 5=easier/more value. Marketability: Scribe, scored 2026-09-01 in `research/SPM_MARKETABILITY_SCORES.md`, SPM-anchored — not comparable to civil scores.)
 
 | # | Candidate | Sub-area | Effort | Value | Marketability | Liability analog (money paid/booked) | Competitive intensity |
 |---|---|---|---|---|---|---|---|
-| A | **Comp analytics/reporting copilot** (natural-language Q&A over existing SPM data) | Analytics & diagnostics | 4 | 4 | TBD | No — advisory/read-only | Medium |
-| B | **Plan-config admin copilot** (plain-English → platform rule config, flags downstream effects) | Comp-plan communication / admin | 3 | 3 | TBD | Assists — human reviews before it goes live | Low-Medium |
-| C | Cross-system CRM/CPQ/ERP reconciliation anomaly detector (overlay, no migration required) | Data reconciliation | 3 | 4 | TBD | Assists — flags, doesn't move money | High (this *is* every incumbent's core integration pitch) |
-| D | Commission dispute/inquiry AI explainer, system-agnostic | Dispute/inquiry handling | 3 | 4 | TBD | Assists — explains a calc, doesn't change it | Medium (SalesCookie ships this natively already) |
-| E | Comp-plan document drafting + labor-law compliance assistant | Plan-document drafting/legal review | 3 | 2 | TBD | **Yes** — legally binding document | Low (no dedicated tool) but liability caps it |
-| F | SPIF/contest management | SPIF & contest management | 3 | 3 | TBD | No | High (QuotaPath, Performio, Bentega, Fullcast, Introw) |
-| G | Quota-setting/capacity-planning advisor | Quota/capacity planning | 3 | 3 | TBD | Assists | High (Fullcast, CaptivateIQ, Lative, Anaplan) |
-| H | Territory design/account-assignment optimizer | Territory design | 3 | 3 | TBD | No | High (eSpatial, Varicent, Fullcast, Workday Adaptive) |
-| I | ASC 606 commission capitalization/accrual automation | Accrual/finance close | 3 | 3 | TBD | **Yes** — audited financials | Very High (Qobra, Kennect, CaptivateIQ, Forma.ai, HubiFi, Xactly, Canidium — 7 named) |
-| J | Core incentive-comp plan design & calc engine | Plan design/modeling (core) | 2 | 5 | TBD | **Yes** — determines pay | Very High — the contested middle every incumbent lives in |
+| A | **Comp analytics/reporting copilot** (natural-language Q&A over existing SPM data) | Analytics & diagnostics | 4 | 4 | **5** (85) | No — advisory/read-only | Medium |
+| B | **Plan-config admin copilot** (plain-English → platform rule config, flags downstream effects) | Comp-plan communication / admin | 3 | 3 | **4** (68.75) | Assists — human reviews before it goes live | Low-Medium |
+| C | Cross-system CRM/CPQ/ERP reconciliation anomaly detector (overlay, no migration required) | Data reconciliation | 3 | 4 | 3 (61.25) | Assists — flags, doesn't move money | High (this *is* every incumbent's core integration pitch) |
+| D | Commission dispute/inquiry AI explainer, system-agnostic | Dispute/inquiry handling | 3 | 4 | **4** (67.5) | Assists — explains a calc, doesn't change it | Medium (SalesCookie ships this natively already) |
+| E | Comp-plan document drafting + labor-law compliance assistant | Plan-document drafting/legal review | 3 | 2 | 2 (41.25) | **Yes** — legally binding document | Low (no dedicated tool) but liability caps it |
+| F | SPIF/contest management | SPIF & contest management | 3 | 3 | 4 (73.75) | No | High (QuotaPath, Performio, Bentega, Fullcast, Introw) |
+| G | Quota-setting/capacity-planning advisor | Quota/capacity planning | 3 | 3 | 2 (47.5) | Assists | High (Fullcast, CaptivateIQ, Lative, Anaplan) |
+| H | Territory design/account-assignment optimizer | Territory design | 3 | 3 | 3 (62.5) | No | High (eSpatial, Varicent, Fullcast, Workday Adaptive) |
+| I | ASC 606 commission capitalization/accrual automation | Accrual/finance close | 3 | 3 | 1 (30) | **Yes** — audited financials | Very High (Qobra, Kennect, CaptivateIQ, Forma.ai, HubiFi, Xactly, Canidium — 7 named) |
+| J | Core incentive-comp plan design & calc engine | Plan design/modeling (core) | 2 | 5 | 2 (46.25) | **Yes** — determines pay | Very High — the contested middle every incumbent lives in |
 
 ## Candidate A — Comp analytics/reporting copilot
 
