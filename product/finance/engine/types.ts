@@ -22,7 +22,7 @@ export interface ValuationComparable { name: string; ev_revenue_multiple: number
 export interface ValuationConfig { stage?: string; discount_rate?: number; terminal_growth_rate?: number; comparables?: ValuationComparable[] }
 export type HealthBand = "HEALTHY" | "WATCH" | "CRITICAL" | "N/A";
 export interface ValuationOutput {
-  schema_version: "1.0.0"; venture: string; scenario: string; stage: string; arr: number;
+  schema_version: "1.0.0"; venture: string; scenario: string; stage: string; arr: number; fiscal_year_revenue: number;
   valuation_range: { low: number; high: number };
   dcf: { value: number; terminal_value: number; terminal_value_pct: number | null; projected_fcfs: number[]; discount_rate: number; terminal_growth_rate: number; warnings: string[] };
   revenue_multiple: { source: "comparables" | "stage_default"; multiple_low: number; multiple_high: number; implied_value_low: number; implied_value_high: number; comparables: ValuationComparable[]; warnings: string[] };

@@ -22,7 +22,12 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
     ? [`Terminal value is ${(terminalPct * 100).toFixed(1)}% of DCF; expected 40–70%.`] : [];
 
   const finalAnnual = model.annual.at(-1);
-  const arr = finalAnnual ? finalAnnual.revenue : Number(model.metrics.total_revenue ?? 0);
+  const finalQuarter = model.quarterly.at(-1);
+  const finalRunRatePeriod = finalQuarter ?? model.monthly.at(-1);
+  const periodMonths = finalQuarter ? finalQuarter.endMonth - finalQuarter.startMonth + 1 : 1;
+  const periodRevenue = finalRunRatePeriod?.revenue ?? 0;
+  const arr = periodRevenue / periodMonths * 12;
+  const fiscalYearRevenue = finalAnnual?.revenue ?? Number(model.metrics.total_revenue ?? 0);
   const validComps = (config.comparables ?? []).filter(c => c.name && Number.isFinite(c.ev_revenue_multiple) && c.ev_revenue_multiple > 0);
   const fallback = STAGE_MULTIPLES[stage] ?? STAGE_MULTIPLES.seed;
   const compMultiples = validComps.map(c => c.ev_revenue_multiple).sort((a, b) => a - b);
@@ -58,7 +63,7 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
   const impliedLow = arr * multipleLow, impliedHigh = arr * multipleHigh;
   const values = [dcfValue, impliedLow, impliedHigh].filter(value => value > 0);
   return {
-    schema_version: "1.0.0", venture: model.venture, scenario: model.scenario, stage, arr: money(arr),
+    schema_version: "1.0.0", venture: model.venture, scenario: model.scenario, stage, arr: money(arr), fiscal_year_revenue: money(fiscalYearRevenue),
     valuation_range: { low: values.length ? money(Math.min(...values)) : 0, high: values.length ? money(Math.max(...values)) : 0 },
     dcf: { value: money(dcfValue), terminal_value: money(terminalValue), terminal_value_pct: terminalPct === null ? null : money(terminalPct), projected_fcfs: projectedFcfs, discount_rate: discountRate, terminal_growth_rate: terminalGrowthRate, warnings: dcfWarnings },
     revenue_multiple: { source: validComps.length ? "comparables" : "stage_default", multiple_low: multipleLow, multiple_high: multipleHigh, implied_value_low: money(impliedLow), implied_value_high: money(impliedHigh), comparables: validComps, warnings: compWarnings },

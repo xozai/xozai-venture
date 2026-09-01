@@ -16,6 +16,8 @@ test("v3 valuation uses engine output and flags stage-default multiples", async 
   assert.ok(valuation.revenue_multiple.warnings[0].includes("No sourced comparables"));
   assert.ok(valuation.valuation_range.low <= valuation.valuation_range.high);
   assert.equal(valuation.saas_health.verdict, "WATCH");
+  assert.equal(valuation.arr, 420000);
+  assert.equal(valuation.fiscal_year_revenue, 366000);
 });
 
 test("v3 valuation uses supplied comparable range", async () => {
