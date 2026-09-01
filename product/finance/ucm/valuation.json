@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "venture": "ucm",
+  "scenario": "base",
+  "stage": "seed",
+  "arr": 654995.4,
+  "fiscal_year_revenue": 489125.06,
+  "valuation_range": {
+    "low": 185488.86,
+    "high": 3274977
+  },
+  "dcf": {
+    "value": 185488.86,
+    "terminal_value": 447409.76,
+    "terminal_value_pct": 2.41,
+    "projected_fcfs": [
+      -278761.04,
+      -148988.68,
+      127603
+    ],
+    "discount_rate": 0.2,
+    "terminal_growth_rate": 0.03,
+    "warnings": [
+      "Terminal value is 241.2% of DCF; expected 40–70%."
+    ]
+  },
+  "revenue_multiple": {
+    "source": "comparables",
+    "multiple_low": 3,
+    "multiple_high": 5,
+    "implied_value_low": 1964986.2,
+    "implied_value_high": 3274977,
+    "comparables": [
+      {
+        "name": "SaaS Capital 2025 bootstrapped SaaS M&A tier, $100K-1M ARR (low)",
+        "ev_revenue_multiple": 3
+      },
+      {
+        "name": "SaaS Capital 2025 bootstrapped SaaS M&A tier, $100K-1M ARR (high)",
+        "ev_revenue_multiple": 5
+      }
+    ],
+    "warnings": []
+  },
+  "saas_health": {
+    "verdict": "WATCH",
+    "drivers": [
+      "nrr_pct: CRITICAL"
+    ],
+    "metrics": {
+      "ltv_cac": {
+        "value": 403.87,
+        "health": "HEALTHY"
+      },
+      "cac_payback_months": {
+        "value": 0.25,
+        "health": "HEALTHY"
+      },
+      "nrr_pct": {
+        "value": 93,
+        "health": "CRITICAL"
+      },
+      "rule_of_40": {
+        "value": 210.17,
+        "health": "HEALTHY"
+      },
+      "burn_multiple": {
+        "value": 0,
+        "health": "HEALTHY"
+      },
+      "runway_months": {
+        "value": null,
+        "health": "N/A"
+      }
+    }
+  },
+  "disclaimer": "Estimates for planning; not legal, tax, or investment advice. Review with an accountant before external use."
+}

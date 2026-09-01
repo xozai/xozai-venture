@@ -21,14 +21,22 @@ actuals — UCM is pre-revenue until m8. Derivations:
 | Burn | −$23,473/mo (cash-generating) | Q12 netCashFlow 70,420 / 3 |
 | Cash | $132,679 | funded-to-plan view: m36 ending cash −250,147 + 382,826 capital need |
 
-## Result
-- Valuation range **$6.5M–$13.1M** (DCF $8.8M inside it). Terminal value is 69%
-  of DCF total — inside the skill's 40–70% sanity band, barely.
-- **Multiples are stage-default seed fallbacks (10×/14×/20× ARR)** —
-  `research/FINANCIAL_BENCHMARKS.md` has no sourced EV/ARR comparables yet.
-  The range is not defensible externally until Researcher adds 2–3 sourced comps.
+## Result (updated 2026-09-01 — sourced comparables now in config)
+- **Comps leg: $2.0M–$3.3M** on the SaaS Capital 2025 bootstrapped M&A tier
+  (3–5× EV/ARR, confidence H — the only comp matching UCM's actual stage; see
+  `research/FINANCIAL_BENCHMARKS.md` §7b, PR #34). Bentley (6.3×) and Procore
+  (5.5×) are ceiling anchors for the memo's qualitative note only — never
+  blended in, per §7b's explicit instruction.
+- The two layers now agree on the comps leg and differ only on DCF horizon,
+  which is expected and documented:
+  - this script's 5-year extrapolated DCF: $8.8M → its range $2.0M–$8.8M
+  - the engine's 3-year deterministic DCF (`../valuation.json`): $0.19M → its
+    range $0.19M–$3.3M. The engine is the authoritative layer.
+- First run (stage-default fallback, before #34's comps existed) showed
+  $6.5M–$13.1M; superseded. Terminal value remains 69% of this script's DCF —
+  inside the skill's 40–70% band, barely.
 - Health verdict: **WATCH.** The one genuine flag is **NRR 93% → CRITICAL**
-  (benchmark >100%), consistent with MODEL.md's "retention, not price, is the
+  (benchmark <100%), consistent with MODEL.md's "retention, not price, is the
   revenue-quality risk." Burn multiple is healthy (cash-generating by m36 in the
   funded view).
 

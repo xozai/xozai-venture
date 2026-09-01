@@ -4,8 +4,8 @@
   "arr": 654996,
   "verdict": "WATCH",
   "valuation_range": {
-    "low": 6549960,
-    "high": 9824940
+    "low": 1964988.0,
+    "high": 8752281.0
   },
   "dcf": {
     "dcf_value": 8752281.0,
@@ -34,14 +34,15 @@
   "revenue_multiple": {
     "arr": 654996,
     "stage": "seed",
+    "source": "comparables",
     "multiples": {
-      "low": 10,
-      "mid": 12,
-      "high": 15
+      "low": 3.0,
+      "mid": 4.0,
+      "high": 5.0
     },
-    "implied_value_low": 6549960,
-    "implied_value_mid": 7859952,
-    "implied_value_high": 9824940
+    "implied_value_low": 1964988.0,
+    "implied_value_mid": 2619984.0,
+    "implied_value_high": 3274980.0
   },
   "saas_metrics": {
     "ltv": 39906.0,
