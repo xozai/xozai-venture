@@ -112,6 +112,34 @@ rather than a UCM-specific data point — flagged per row.
 
 **No win-rate benchmark found this pass** for low-touch/card-purchase individual-buyer SaaS specifically — flagged as an open gap, same as the brief's own "no verbatim pain quote yet" caveat. Recommend the engine take win-rate as a pure `confidence: L`, `source: "assumption"` input until Skill 3 (go-to-market) produces real funnel data, rather than borrowing an unrelated vertical's win rate.
 
+## 7b. Valuation comparables (EV/ARR, EV/Revenue) — for v3 triangulation
+
+Added 2026-09-01 per `financial-model` SKILL.md v3 step 5's requirement that
+the revenue-multiple triangulation leg use a sourced comparable before
+falling back to the generic stage-default bands (Seed 10–15×, Series A
+8–12×, Series B 5–8×). PR #27's first triangulation run flagged this gap
+explicitly. Three comparables below, ranked by relevance to UCM's actual
+stage (bootstrapped, pre/early-revenue, individual-buyer B2B), not by size.
+
+| Comparable | Multiple | Basis | Source | Date | Confidence |
+|---|---|---|---|---|---|
+| SaaS Capital 2025 bootstrapped SaaS M&A multiple, $100K–1M ARR tier | 3–5× (4.8× median across all bootstrapped tiers) | EV/ARR | [SaaS Capital 2025 index, via L40° SaaS Multiples 2026](https://www.l40.com/insights/saas-multiples) and [saasvaluationmultiple.com stage breakdown](https://saasvaluationmultiple.com/by-stage) | 2025 data, cited 2026-05-02 | **H — the only comp matching UCM's actual stage** (bootstrapped, no round, sub-$1M ARR base case) rather than a public-market or funded-round proxy |
+| Bentley Systems (BSY), public — civil/infrastructure design software | 6.3× | EV/Revenue (TTM) | [TradingView BSY EV/Sales fwd](https://www.tradingview.com/symbols/BIVA-BSY/financials-statistics-and-ratios/enterprise-value-sales-fwd/); market cap ~$9B, EV ~$10–11B, TTM revenue ~$1.56B, as of 2026-07-01 | 2026-07-01 | M — same buyer ecosystem (civil engineers/AEC firms) and closest product analog by discipline, but a mature public company at massive scale; use as a ceiling anchor, not the base-case multiple |
+| Procore Technologies (PCOR), public — construction/AEC project-management SaaS | 5.5× | EV/Revenue (TTM) | [stockanalysis.com PCOR statistics](https://stockanalysis.com/stocks/pcor/statistics/); market cap $8.5B, EV $7.9B, TTM revenue $1.371B, as of 2026-08-05 | 2026-08-05 | M — same buyer ecosystem (construction/AEC), same "vertical workflow SaaS, not horizontal" category, but public-scale; use as a ceiling anchor alongside Bentley, not the base-case multiple. (PCOR's own EV/Revenue was as low as 4.79× intraperiod, ~50% below its 10-yr median of 9.63× — flagging the spread since the two data points three months apart moved the multiple materially) |
+
+**Applied to UCM:** base-case triangulation should use the **SaaS Capital
+bootstrapped tier (3–5×)** as the stage-appropriate multiple — it is the only
+comp that matches UCM's actual financing profile (bootstrapped, small ARR),
+not just its buyer/discipline. Bentley and Procore confirm the *category*
+supports premium multiples once a company reaches scale (6.3× and 5.5× at
+$1.3–1.5B revenue) — useful as an upper-bound sanity check on the
+"what could this become" question, but using either as UCM's near-term
+multiple would overstate the value of a pre-revenue/early-revenue company by
+conflating public-market scale economics with a two-person bootstrapped
+start. Do not blend all three into one number; if the engine wants a single
+comps-leg figure, use 3–5× and cite Bentley/Procore only in the memo's
+qualitative "market ceiling" note.
+
 ## 8. `financing`
 
 Not applicable to UCM base case (bootstrapped, no round). No benchmark pulled this pass — not needed unless joseleos changes the funding parameter.
@@ -128,3 +156,4 @@ Not applicable to UCM base case (bootstrapped, no round). No benchmark pulled th
 2. ~~Payroll-provider and per-head software-tooling monthly fees~~ — resolved this pass: Gusto Simple ($61–79/mo for a 2–5 person team) and engineering-tooling ($150–200/head/mo) rows added to `ga_ops` above.
 3. Win-rate benchmark for low-touch, card-purchase, individual-professional-buyer SaaS — none found; current recommendation is to leave as an unvalidated assumption rather than force-fit an unrelated vertical's number.
 4. SPM-track benchmarks (enterprise incentive-comp space) are out of scope for this pass — this file covers CIVIL/UCM only, per the critical-path request in-thread. A separate SPM benchmarks pass is needed before any SPM candidate reaches financial-model stage.
+5. ~~EV/ARR comparables for v3 triangulation~~ — resolved this pass: §7b adds 3 sourced comparables (SaaS Capital bootstrapped tier, Bentley Systems, Procore Technologies), requested after PR #27's triangulation run fell back to the generic stage-default band.
