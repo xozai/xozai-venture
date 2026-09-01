@@ -40,3 +40,13 @@ actuals — UCM is pre-revenue until m8. Derivations:
   as order-of-magnitude only, as the script itself is labeled.
 - Run on the funded-to-plan view; the unfunded base has negative cash at m36
   and the $383k base capital need (joseleos's open lever decision) still stands.
+
+## 2026-09-01 update (Honey0, PR #28)
+`financial_calc.py` previously emitted per-metric HEALTHY/WATCH/CRITICAL flags
+but never rolled them into the single verdict SKILL.md step 5 requires
+("engine computes ... never prose"). Added `overall_verdict()` (pure function,
+not from the upstream vendor) and a top-level `verdict` field to
+`model_output.json`. Re-ran against the inputs above: **`verdict: "WATCH"`**,
+`concerning_metrics: ["nrr"]` — matches this file's hand-written verdict above
+exactly. Every other field in `model_output.json` is byte-identical to the
+first run; this was a pure addition, not a recompute.

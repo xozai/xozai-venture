@@ -2,6 +2,7 @@
   "company": "UCM (Utility Conflict Matrix automation)",
   "stage": "seed",
   "arr": 654996,
+  "verdict": "WATCH",
   "valuation_range": {
     "low": 6549960,
     "high": 13099920
@@ -57,6 +58,13 @@
       "payback": "HEALTHY",
       "burn": "HEALTHY",
       "nrr": "CRITICAL"
+    },
+    "overall": {
+      "verdict": "WATCH",
+      "concerning_metrics": [
+        "nrr"
+      ],
+      "runway_implies_critical": false
     }
   },
   "benchmarks": {

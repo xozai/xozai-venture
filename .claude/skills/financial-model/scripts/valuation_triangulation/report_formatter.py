@@ -69,6 +69,7 @@ def main():
         "  NOT a replacement for MODEL.md / model.xlsx \u2014 sanity-check only.",
         "",
         f"  ARR: {fmt_usd(data.get('arr', 0))}",
+        f"  {health_icon(data.get('verdict', ''))}  OVERALL VERDICT: {data.get('verdict', 'N/A')}",
         "",
         "VALUATION RANGE",
         f"  Low:   {fmt_usd(vr.get('low', 0))}",
