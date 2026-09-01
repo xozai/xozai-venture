@@ -148,8 +148,10 @@ def saas_metrics(inputs: dict) -> dict:
     rule_of_40 = (arr_growth_annual_pct + ebitda_margin_pct) if ebitda_margin_pct is not None else None
 
     # Health verdicts
-    ltv_cac_health = "HEALTHY" if ltv_cac >= 3 else ("WATCH" if ltv_cac >= 1.5 else "CRITICAL")
-    payback_health = "HEALTHY" if 0 < cac_payback <= 12 else ("WATCH" if cac_payback <= 18 else "CRITICAL")
+    # SKILL.md benchmark table: LTV:CAC best-in-class >5x, good >3x, concerning <2x.
+    ltv_cac_health = "HEALTHY" if ltv_cac >= 5 else ("WATCH" if ltv_cac >= 2 else "CRITICAL")
+    # SKILL.md benchmark table: CAC payback best-in-class <12mo, good <18mo, concerning >24mo.
+    payback_health = "HEALTHY" if 0 < cac_payback <= 12 else ("WATCH" if cac_payback <= 24 else "CRITICAL")
     # SKILL.md benchmark table: burn multiple best-in-class <1x, good <2x, concerning >2x.
     burn_health    = "HEALTHY" if burn_multiple is not None and burn_multiple <= 1 else \
                      ("WATCH" if burn_multiple is not None and burn_multiple <= 2 else "CRITICAL")

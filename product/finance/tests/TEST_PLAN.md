@@ -179,18 +179,22 @@ concerning-metric count + a runway-months override, per SKILL.md's stated rule) 
 PR #27's committed `model_inputs.json` reproduces every prior field byte-for-byte (`dcf`,
 `revenue_multiple`, `saas_metrics`, `benchmarks`, `_note` all unchanged) plus the new `verdict`
 field, which reads `"WATCH"` — matching PR #27's hand-written NOTES.md exactly.
-**Reconciliation item — closed (Pollen0, spec-conformance pass, 2026-09-01):** PR #30 flagged
-`saas_metrics()`'s coded thresholds as narrower than SKILL.md's published benchmark table (burn
-multiple: doc's "Concerning" `>2x` vs. code's `CRITICAL` at `>2.5x`; NRR: doc distinguishes
+**Reconciliation item — closed (Pollen0, spec-conformance pass, 2026-09-01, PR #38):** PR #30
+flagged `saas_metrics()`'s coded thresholds as narrower than SKILL.md's published benchmark table
+(burn multiple: doc's "Concerning" `>2x` vs. code's `CRITICAL` at `>2.5x`; NRR: doc distinguishes
 best-in-class `>120%` from good `>110%`, code collapsed both into one `HEALTHY` band at `>=110%`).
 Per Claude's routing decision, the code was tightened to match the doc rather than loosening the
-doc — both `financial_calc.py` and the TS engine's `valuation.ts` now use the doc's exact cutpoints
-(burn multiple `<=1x`/`<=2x`/`>2x`; NRR `>=120%`/`>=100%`/`<100%`). The fixtures below pin the
-doc's bands, not the prior looser code.
+doc, applied **uniformly across all four metrics**: HEALTHY = the doc's best-in-class band, WATCH
+= the doc's good band plus the ambiguous zone down to its concerning cutoff, CRITICAL = the doc's
+concerning band. Both `financial_calc.py` and the TS engine's `valuation.ts` now use: LTV:CAC
+`>=5x`/`>=2x`/`<2x`; CAC payback `<=12mo`/`<=24mo`/`>24mo`; burn multiple `<=1x`/`<=2x`/`>2x`; NRR
+`>=120%`/`>=100%`/`<100%`. (First pass of PR #38 only fixed burn multiple and NRR; review caught
+that LTV:CAC and CAC payback were still on the old good→HEALTHY convention, fixed in the same PR.)
+The fixtures below pin the doc's bands, not the prior looser code.
 **Steps:** `product/finance/tests/test_triangulation.py` (wired into `npm test`, runs after the
 TS engine suite):
 1. **TC-10a — per-metric boundaries.** Call `saas_metrics()` directly with inputs crafted to land
-   exactly on each coded cutpoint: LTV:CAC 3.0x/1.5x/1.4x, CAC payback 12mo/18mo/19mo, burn
+   exactly on each coded cutpoint: LTV:CAC 5.0x/2.0x/1.9x, CAC payback 12mo/24mo/25mo, burn
    multiple 1.0x/2.0x/2.1x, NRR 120%/100%/99% → expect HEALTHY/WATCH/CRITICAL respectively at each
    triple.
 2. **TC-10b — `overall_verdict()` aggregation.** Unit-test the new function directly against

@@ -59,8 +59,10 @@ export function calculateValuation(input: ModelInput, model: ModelOutput, config
   const payback = model.metrics.cac_payback_months;
   const nrr = model.metrics.nrr_annual_pct;
   const metrics = {
-    ltv_cac: { value: ltvCac, health: health(ltvCac, n => n > 3, n => n < 2) },
-    cac_payback_months: { value: payback, health: health(payback, n => n < 18, n => n > 24) },
+    // SKILL.md benchmark table: LTV:CAC best-in-class >5x, good >3x, concerning <2x.
+    ltv_cac: { value: ltvCac, health: health(ltvCac, n => n > 5, n => n < 2) },
+    // SKILL.md benchmark table: CAC payback best-in-class <12mo, good <18mo, concerning >24mo.
+    cac_payback_months: { value: payback, health: health(payback, n => n < 12, n => n > 24) },
     // SKILL.md benchmark table: NDR best-in-class >120%, good >110%, concerning <100%.
     nrr_pct: { value: nrr === null ? null : nrr * 100, health: health(nrr, n => n > 1.2, n => n < 1) },
     // SKILL.md: Rule of 40 good >=40, concerning <40 "and not accelerating" — without a growth-
