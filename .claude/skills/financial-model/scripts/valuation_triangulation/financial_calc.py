@@ -29,7 +29,7 @@ import os
 # ── Stage-default revenue multiples ──────────────────────────────────────────
 STAGE_MULTIPLES = {
     "pre-seed": {"low": 12, "mid": 18, "high": 25},
-    "seed":     {"low": 10, "mid": 14, "high": 20},
+    "seed":     {"low": 10, "mid": 12, "high": 15},
     "series a": {"low": 8,  "mid": 11, "high": 15},
     "series b": {"low": 5,  "mid": 8,  "high": 12},
     "series c": {"low": 3,  "mid": 6,  "high": 9},
@@ -150,9 +150,11 @@ def saas_metrics(inputs: dict) -> dict:
     # Health verdicts
     ltv_cac_health = "HEALTHY" if ltv_cac >= 3 else ("WATCH" if ltv_cac >= 1.5 else "CRITICAL")
     payback_health = "HEALTHY" if 0 < cac_payback <= 12 else ("WATCH" if cac_payback <= 18 else "CRITICAL")
-    burn_health    = "HEALTHY" if burn_multiple is not None and burn_multiple <= 1.5 else \
-                     ("WATCH" if burn_multiple is not None and burn_multiple <= 2.5 else "CRITICAL")
-    nrr_health     = "HEALTHY" if nrr >= 1.1 else ("WATCH" if nrr >= 1.0 else "CRITICAL")
+    # SKILL.md benchmark table: burn multiple best-in-class <1x, good <2x, concerning >2x.
+    burn_health    = "HEALTHY" if burn_multiple is not None and burn_multiple <= 1 else \
+                     ("WATCH" if burn_multiple is not None and burn_multiple <= 2 else "CRITICAL")
+    # SKILL.md benchmark table: NDR best-in-class >120%, good >110%, concerning <100%.
+    nrr_health     = "HEALTHY" if nrr >= 1.2 else ("WATCH" if nrr >= 1.0 else "CRITICAL")
 
     return {
         "ltv":                      round(ltv, 0),

@@ -38,11 +38,10 @@ def check(label, condition):
 
 # ── TC-10a: per-metric bands — financial_calc.py's own coded thresholds ──────
 # Note: these pin the *script's* thresholds (HEALTHY/WATCH/CRITICAL cutpoints
-# above the code's `saas_metrics()`), which are narrower than the informal
-# best/good/concerning bands published in SKILL.md's benchmark table (e.g.
-# SKILL.md's burn-multiple "Concerning" is >2x; the script's CRITICAL is
-# >2.5x). Flagged as an open reconciliation item in TEST_PLAN.md TC-10 —
-# these fixtures test the code as written, not the doc as written.
+# above the code's `saas_metrics()`). PR #30 flagged burn-multiple and NRR as
+# narrower than SKILL.md's published benchmark table; Pollen0's spec-
+# conformance pass (2026-09-01) closed that gap by tightening the code to
+# match the doc, so these now pin the doc's own bands.
 
 def ltv_cac_case(cac):
     return fc.saas_metrics({"arpu_monthly": 100, "gross_margin": 1.0, "monthly_churn": 0.1, "cac": cac})["health"]["ltv_cac"]
@@ -63,15 +62,15 @@ check("CAC payback = 19mo -> CRITICAL", payback_case(1900) == "CRITICAL")
 def burn_case(monthly_burn):
     return fc.saas_metrics({"mrr": 10000, "mrr_growth_rate": 0.1, "monthly_burn": monthly_burn, "monthly_churn": 0.1})["health"]["burn"]
 
-check("Burn multiple = 1.5x -> HEALTHY (boundary)", burn_case(1500) == "HEALTHY")
-check("Burn multiple = 2.5x -> WATCH (boundary)", burn_case(2500) == "WATCH")
-check("Burn multiple = 2.6x -> CRITICAL", burn_case(2600) == "CRITICAL")
+check("Burn multiple = 1.0x -> HEALTHY (boundary)", burn_case(1000) == "HEALTHY")
+check("Burn multiple = 2.0x -> WATCH (boundary)", burn_case(2000) == "WATCH")
+check("Burn multiple = 2.1x -> CRITICAL", burn_case(2100) == "CRITICAL")
 
 
 def nrr_case(nrr):
     return fc.saas_metrics({"nrr": nrr, "monthly_churn": 0.1})["health"]["nrr"]
 
-check("NRR = 110% -> HEALTHY (boundary)", nrr_case(1.10) == "HEALTHY")
+check("NRR = 120% -> HEALTHY (boundary)", nrr_case(1.20) == "HEALTHY")
 check("NRR = 100% -> WATCH (boundary)", nrr_case(1.00) == "WATCH")
 check("NRR = 99% -> CRITICAL", nrr_case(0.99) == "CRITICAL")
 

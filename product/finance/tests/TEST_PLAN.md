@@ -179,18 +179,19 @@ concerning-metric count + a runway-months override, per SKILL.md's stated rule) 
 PR #27's committed `model_inputs.json` reproduces every prior field byte-for-byte (`dcf`,
 `revenue_multiple`, `saas_metrics`, `benchmarks`, `_note` all unchanged) plus the new `verdict`
 field, which reads `"WATCH"` — matching PR #27's hand-written NOTES.md exactly.
-**Open reconciliation item (not fixed here — flagging per Honey0's "warnings" role):**
-`saas_metrics()`'s coded thresholds are narrower than SKILL.md's published benchmark table, e.g.
-burn multiple: SKILL.md's "Concerning" is `>2x`; the script's `CRITICAL` cutoff is `>2.5x`. NRR:
-SKILL.md distinguishes best-in-class (`>120%`) from good (`>110%`); the script collapses both into
-one `HEALTHY` band at `>=110%`. The fixtures below pin the *script's actual* thresholds (so a
-future silent change is caught), not SKILL.md's prose table — Claude/Researcher should decide
-whether to tighten the code or loosen the doc.
+**Reconciliation item — closed (Pollen0, spec-conformance pass, 2026-09-01):** PR #30 flagged
+`saas_metrics()`'s coded thresholds as narrower than SKILL.md's published benchmark table (burn
+multiple: doc's "Concerning" `>2x` vs. code's `CRITICAL` at `>2.5x`; NRR: doc distinguishes
+best-in-class `>120%` from good `>110%`, code collapsed both into one `HEALTHY` band at `>=110%`).
+Per Claude's routing decision, the code was tightened to match the doc rather than loosening the
+doc — both `financial_calc.py` and the TS engine's `valuation.ts` now use the doc's exact cutpoints
+(burn multiple `<=1x`/`<=2x`/`>2x`; NRR `>=120%`/`>=100%`/`<100%`). The fixtures below pin the
+doc's bands, not the prior looser code.
 **Steps:** `product/finance/tests/test_triangulation.py` (wired into `npm test`, runs after the
 TS engine suite):
 1. **TC-10a — per-metric boundaries.** Call `saas_metrics()` directly with inputs crafted to land
    exactly on each coded cutpoint: LTV:CAC 3.0x/1.5x/1.4x, CAC payback 12mo/18mo/19mo, burn
-   multiple 1.5x/2.5x/2.6x, NRR 110%/100%/99% → expect HEALTHY/WATCH/CRITICAL respectively at each
+   multiple 1.0x/2.0x/2.1x, NRR 120%/100%/99% → expect HEALTHY/WATCH/CRITICAL respectively at each
    triple.
 2. **TC-10b — `overall_verdict()` aggregation.** Unit-test the new function directly against
    hand-built health-flag combinations: 0 CRITICAL metrics → HEALTHY; 1 → WATCH; 2 → CRITICAL;
