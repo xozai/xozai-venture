@@ -90,6 +90,37 @@ governance," "every TX council member," multi-state, or something else?)
 Anything an investor should know that the documents don't capture.
 
 ---
+## Update — 2026-09-01 (Scribe)
+
+joseleos asked for the deck rather than answering the six open questions
+(Strata channel, event `ef6afb97…`). Rather than block Gate 0, the deck was built from
+accepted artifacts only, and the open questions were resolved as far as sourced evidence
+allows:
+
+- **Q3 founder story** — partially answered from the published team page via the 30 Aug
+  research brief: Holly Richard, Founder/CEO, Doctor of Physical Therapy, previously built
+  healthcare and fitness businesses. Her own account of *why municipal records* is still
+  undocumented. **Still open.**
+- **Q4 unfair advantage** — answered from the same source and now the deck's team slide:
+  Ralph Gutierrez, Senior Municipal Advisor, two-term mayor and council member of Schertz
+  (our demo city), ~50 years public service; Raquel Gutierrez, 30+ years Central Texas civic
+  engagement. Distribution, not technology. **Closed on the evidence available.**
+- **Q5 traction** — no verified pipeline exists in any artifact. The deck states "not
+  disclosed" and carries no usage metric. **Still open.**
+- **Q9 biggest risk** — ranked by Scribe from the model: execution (one founder, 0.35
+  cities/mo, the −$29,069 month-18 trough) is the inner ring; incumbent good-enough AI is the
+  outer. Overridable. **Answered by inference, flagged on the deck.**
+- **Q10 ask** — resolved to the only figure the accepted model supports: **$40k of working
+  capital plus five pilot cities**, use of funds traced to `MODEL.md` line items. An
+  institutional round needs a financed model re-run. **Decision made, marked overridable.**
+- **Q11 3-year vision** — the deck carries the model's own horizon (31 cities, ≈$325k ARR
+  run-rate) and explicitly declines to draw a national TAM. **Answered conservatively.**
+
+Also surfaced while building: the interview assumes joseleos is the founder, but the
+published team page lists Holly Richard as Founder/CEO. The deck says nothing about
+joseleos's role either way. Worth confirming.
+
+---
 ## Prerequisite flags (carried to Gate 1)
 - `Strata_GTM_Strategy.docx` is still a draft pending HermesX sign-off; the
   skill wants a signed-off GTM before Phase 1 foundation work hardens
