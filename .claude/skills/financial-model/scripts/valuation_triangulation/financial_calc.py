@@ -173,6 +173,29 @@ def saas_metrics(inputs: dict) -> dict:
     }
 
 
+# ── Overall verdict (added by Honey0, not part of the upstream vendor — see
+#    SKILL.md step 5: "a single HEALTHY/WATCH/CRITICAL verdict ... never in
+#    prose"; the vendored per-metric flags above didn't roll up into one) ──────
+def overall_verdict(saas: dict) -> dict:
+    health = saas.get("health", {})
+    concerning = sorted(k for k, v in health.items() if v == "CRITICAL")
+    runway = saas.get("runway_months")
+    runway_critical = isinstance(runway, (int, float)) and runway < 6
+
+    if runway_critical or len(concerning) >= 2:
+        verdict = "CRITICAL"
+    elif len(concerning) == 0:
+        verdict = "HEALTHY"
+    else:
+        verdict = "WATCH"
+
+    return {
+        "verdict": verdict,
+        "concerning_metrics": concerning,
+        "runway_implies_critical": runway_critical,
+    }
+
+
 # ── Stage benchmarks ──────────────────────────────────────────────────────────
 STAGE_BENCHMARKS = {
     "seed": {
@@ -265,6 +288,7 @@ def main():
 
     # SaaS Metrics
     saas_result = saas_metrics(inputs)
+    saas_result["overall"] = overall_verdict(saas_result)
 
     # Combined valuation range
     dcf_val  = dcf_result.get("dcf_value", 0)
@@ -278,6 +302,7 @@ def main():
         "company":  inputs.get("company", venture),
         "stage":    inputs.get("stage", "Unknown"),
         "arr":      arr,
+        "verdict":  saas_result["overall"]["verdict"],
         "valuation_range": {
             "low":  valuation_range_low,
             "high": valuation_range_high,
@@ -294,7 +319,7 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
 
-    print(f"financial_calc.py: ARR=${arr:,.0f}, DCF=${dcf_val:,.0f}, Rev-mult range ${rev_low:,.0f}-${rev_high:,.0f}")
+    print(f"financial_calc.py: ARR=${arr:,.0f}, DCF=${dcf_val:,.0f}, Rev-mult range ${rev_low:,.0f}-${rev_high:,.0f}, verdict={output['verdict']}")
     print(json.dumps(output, indent=2))
 
 

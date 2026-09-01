@@ -164,6 +164,49 @@ ExcelJS on write/read and must be treated as `0`, not `NaN`).
 / `.operatingIncome` (24-month slice) to the cent. This is TC-07's workbook half — the narrative
 (`MODEL.md` prose-vs-cell) half remains **not yet testable** until a UCM `MODEL.md` exists.
 
+### TC-10 — v3 valuation triangulation: known-input → known-verdict fixtures
+**Preconditions:** `.claude/skills/financial-model/scripts/valuation_triangulation/financial_calc.py`
+(vendored + adapted, MIT, from `davepoon/buildwithclaude`, PR #25). Scope: this script only —
+the deterministic engine (TC-01–TC-09) is untouched and remains the source of truth per SKILL.md.
+**Gap found before writing fixtures:** the vendored `saas_metrics()` emits a per-metric
+HEALTHY/WATCH/CRITICAL flag for LTV:CAC, CAC payback, burn multiple, and NRR, but nothing rolled
+those into the single verdict SKILL.md step 5 requires ("a single HEALTHY/WATCH/CRITICAL verdict
+... never in prose"). PR #27 (first real UCM run) computed "WATCH" by hand in its NOTES.md — a
+literal instance of the prose-math the skill's own Rules section prohibits. Added
+`overall_verdict()` to `financial_calc.py` (pure function, not from the upstream vendor;
+concerning-metric count + a runway-months override, per SKILL.md's stated rule) and a top-level
+`verdict` field to `model_output.json`. Verified additive-only: re-running the script against
+PR #27's committed `model_inputs.json` reproduces every prior field byte-for-byte (`dcf`,
+`revenue_multiple`, `saas_metrics`, `benchmarks`, `_note` all unchanged) plus the new `verdict`
+field, which reads `"WATCH"` — matching PR #27's hand-written NOTES.md exactly.
+**Open reconciliation item (not fixed here — flagging per Honey0's "warnings" role):**
+`saas_metrics()`'s coded thresholds are narrower than SKILL.md's published benchmark table, e.g.
+burn multiple: SKILL.md's "Concerning" is `>2x`; the script's `CRITICAL` cutoff is `>2.5x`. NRR:
+SKILL.md distinguishes best-in-class (`>120%`) from good (`>110%`); the script collapses both into
+one `HEALTHY` band at `>=110%`. The fixtures below pin the *script's actual* thresholds (so a
+future silent change is caught), not SKILL.md's prose table — Claude/Researcher should decide
+whether to tighten the code or loosen the doc.
+**Steps:** `product/finance/tests/test_triangulation.py` (wired into `npm test`, runs after the
+TS engine suite):
+1. **TC-10a — per-metric boundaries.** Call `saas_metrics()` directly with inputs crafted to land
+   exactly on each coded cutpoint: LTV:CAC 3.0x/1.5x/1.4x, CAC payback 12mo/18mo/19mo, burn
+   multiple 1.5x/2.5x/2.6x, NRR 110%/100%/99% → expect HEALTHY/WATCH/CRITICAL respectively at each
+   triple.
+2. **TC-10b — `overall_verdict()` aggregation.** Unit-test the new function directly against
+   hand-built health-flag combinations: 0 CRITICAL metrics → HEALTHY; 1 → WATCH; 2 → CRITICAL;
+   0 CRITICAL metrics but `runway_months < 6` → CRITICAL (the runway override fires regardless of
+   metric count); `runway_months == 6` exactly → HEALTHY (not `< 6`); `runway_months: "N/A"`
+   (cash-generating ventures, like UCM) never triggers the override.
+3. **TC-10c — UCM golden fixture.** Re-run `dcf_valuation()`/`saas_metrics()`/`overall_verdict()`
+   against the real, committed `product/finance/ucm/triangulation/model_inputs.json` (PR #27,
+   2026-09-01) and assert the DCF value and overall verdict match the committed
+   `model_output.json` exactly — a regression check for both this file and that one together.
+**Expected (verified 2026-09-01):** all 21 assertions pass (12 boundary cases — 3 cutpoints ×
+4 metrics, 6 aggregation cases, 4 UCM golden-fixture checks — 1 not yet described above: NRR
+health on the golden fixture reads CRITICAL, consistent with MODEL.md's existing retention
+caveat). Re-verify TC-10c if `financial_calc.py`'s math changes or if UCM's `model_inputs.json`
+is regenerated from a newer engine run.
+
 ## Out of scope for this plan
 - Exact scenario-by-scenario hand-computed tables for `upside`/`downside` beyond the
   monotonicity property — the base case already proves the arithmetic; programmatic comparison

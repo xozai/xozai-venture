@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test product/finance/engine/test/*.test.ts",
+    "test": "node --test product/finance/engine/test/*.test.ts && python3 product/finance/tests/test_triangulation.py",
     "model": "node product/finance/engine/cli.ts"
   },
   "dependencies": { "exceljs": "^4.4.0" },
