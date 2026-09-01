@@ -104,6 +104,30 @@ check(
 )
 
 
+# ── TC-10b2: revenue-multiple leg — sourced comparables take precedence ──────
+# SKILL.md step 5: stage defaults are a flagged fallback only when no
+# comparable is sourced. Mirrors the TS engine's selection rule.
+rm_comps = fc.revenue_multiple_valuation(
+    arr=1_000_000, stage="seed",
+    comparables=[{"name": "Comp A", "ev_revenue_multiple": 3.0},
+                 {"name": "Comp B", "ev_revenue_multiple": 5.0}],
+)
+check("comps present -> source = 'comparables'", rm_comps["source"] == "comparables")
+check("comps present -> low/high = min/max of comps (3x/5x), not stage defaults",
+      (rm_comps["multiples"]["low"], rm_comps["multiples"]["high"]) == (3.0, 5.0))
+check("comps present -> implied range uses comp multiples ($3.0M-$5.0M on $1M ARR)",
+      (rm_comps["implied_value_low"], rm_comps["implied_value_high"]) == (3_000_000, 5_000_000))
+
+rm_default = fc.revenue_multiple_valuation(arr=1_000_000, stage="seed", comparables=[])
+check("no comps -> source = 'stage_default' (flagged fallback)", rm_default["source"] == "stage_default")
+check("no comps -> seed defaults 10x/15x", (rm_default["multiples"]["low"], rm_default["multiples"]["high"]) == (10, 15))
+
+rm_invalid = fc.revenue_multiple_valuation(
+    arr=1_000_000, stage="seed", comparables=[{"name": "Bad", "ev_revenue_multiple": 0}],
+)
+check("non-positive comp multiples are ignored -> falls back to stage_default", rm_invalid["source"] == "stage_default")
+
+
 # ── TC-10c: UCM golden fixture — real venture data, end-to-end script run ───
 # product/finance/ucm/triangulation/model_inputs.json is the actual first v3
 # run (PR #27, 2026-09-01), reproduced here from that PR's committed input.

@@ -94,18 +94,24 @@ def dcf_valuation(
 
 # ── Revenue Multiple Valuation ────────────────────────────────────────────────
 def revenue_multiple_valuation(arr: float, stage: str, comparables: list) -> dict:
-    mults = get_multiples(stage)
-
-    if comparables:
-        comp_mults = [c.get("ev_revenue_multiple", 0) for c in comparables if c.get("ev_revenue_multiple", 0) > 0]
-        if comp_mults:
-            avg_comp_mult = sum(comp_mults) / len(comp_mults)
-            mults["comps_avg"] = round(avg_comp_mult, 1)
-            mults["comps_implied_value"] = round(arr * avg_comp_mult, 0)
+    # SKILL.md step 5: sourced comparables take precedence; stage defaults are
+    # a fallback that must be flagged. Mirrors the TS engine's selection rule.
+    comp_mults = [c.get("ev_revenue_multiple", 0) for c in (comparables or []) if c.get("ev_revenue_multiple", 0) > 0]
+    if comp_mults:
+        source = "comparables"
+        mults = {
+            "low":  min(comp_mults),
+            "mid":  round(sum(comp_mults) / len(comp_mults), 1),
+            "high": max(comp_mults),
+        }
+    else:
+        source = "stage_default"
+        mults = get_multiples(stage)
 
     return {
         "arr": arr,
         "stage": stage,
+        "source": source,
         "multiples": mults,
         "implied_value_low":  round(arr * mults["low"], 0),
         "implied_value_mid":  round(arr * mults["mid"], 0),
