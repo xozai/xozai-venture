@@ -101,9 +101,16 @@ last look. None of 3–13 clears "Low" competitive intensity; only #1 and #2 do.
   pricing or a sales motion competing for this buyer.
 - **Venues:** ASCE Utility Engineering & Surveying Institute (UESI), state
   DOT utility-coordination training programs, APWA.
-- **Verbatim pain quotes:** none surfaced — see gap statement above. FHWA/NAP
-  sources confirm the *cost* of getting this wrong (delays, safety issues,
-  redesign) but that's institutional framing, not an engineer's own words.
+- **Verbatim pain quotes:** **update 2026-09-01** — no longer "none
+  surfaced." `research/UCM_PAIN_QUOTES.md` has 5 usable, dated, attributed
+  quotes (Douglas County NE, Mahoning County OH, Lee's Summit MO, Bryan TX,
+  Lucas County OH engineers/officials) plus 2 borderline. Scope caveat:
+  all are public-agency engineers on general road/utility-relocation
+  projects, not the scan's specific private-firm PE/EIT buyer — evidences
+  the pain is real and current, doesn't confirm this exact buyer feels it
+  the same way. See that file for the full source-family breakdown
+  (NCHRP/SHRP2/GAO/trade-press/committee-minutes all checked and exhausted
+  or access-blocked this pass).
 
 ## What changed vs. the prior-art scan (rows 3–13)
 
